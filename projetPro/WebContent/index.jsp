@@ -41,11 +41,7 @@
 								<ul class='nav' width='800px'>
 	
 	
-	/**
-	*Description
-	
-	*/
-								
+							
 									<li><a onclick='newproblem()'>New problem</a></li>
 									<li class="divider-vertical"></li>
 									<li class='dropdown'><a class='dropdown-toggle' data-toggle='dropdown' > Examples <b class='caret'></b></a>
