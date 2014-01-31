@@ -23,12 +23,11 @@
 		<script src='satrennespagui_javascript/examples.js'></script>
 		<title>SATRennesPa</title>
 	</head>
+	
 	<body>
 		<div class='container'>
 			
-
-
-	<div id='page-content' class='page-content'>
+		<div id='page-content' class='page-content'>
 
 			<form id='form_exemples' action='index.jsp'>
 			    
@@ -40,6 +39,12 @@
 						
 							<div class='navbar-inner'>
 								<ul class='nav' width='800px'>
+	
+	
+	/**
+	*Description
+	
+	*/
 								
 									<li><a onclick='newproblem()'>New problem</a></li>
 									<li class="divider-vertical"></li>
