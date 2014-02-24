@@ -12,5 +12,18 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/AbsoluteLayout.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/appframework-1.0.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jasypt-1.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jasypt-springsecurity2-1.9.1-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jlatexmath-0.9.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/joda-time-2.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jscheme-7.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/kawa-1.11.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.29-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.sat4j.core.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/standard-1.1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/swing-worker-1.1.jar"/>
 	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
 </classpath>
