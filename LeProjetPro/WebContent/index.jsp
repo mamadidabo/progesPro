@@ -94,15 +94,7 @@
 											<ul class='dropdown-menu'>
 												<li><a href="index.jsp?language=en"><img src="icons/flags/Angleterre.png"/></a></li>
 												<li><a href="index.jsp?language=fr"><img src="icons/flags/France.png"/></a></li>
-											</ul></li>
-												
-												
-												
-										
-
-												
-												
-												
+											</ul></li>		
 										
 									</ul>
 								</div>

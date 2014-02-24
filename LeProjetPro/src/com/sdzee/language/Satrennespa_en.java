@@ -37,6 +37,10 @@ public class Satrennespa_en extends ListResourceBundle{
 		  {"inscription.confirmmdp","Confirm password"},
 		  {"inscription.nomUser","User name"},
 		  {"inscription.prenomUser","User first name"},
+		  {"result.satisfiable","The formula is satisfiable, here is a solution :"},
+		  {"result.nonsatisfiable","The formula is not satisfiable !"},
+		  {"result.pbsolveur","Problem solver, please refresh the page"},
+		  {"result.pbvariable","Problem nbInput with the variable that is"},
 
 		};
 }
