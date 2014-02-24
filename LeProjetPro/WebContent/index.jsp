@@ -67,35 +67,30 @@
 										<li><a onclick='newproblem()'><fmt:message key="index.menu.titre1"/></a></li>
 										<li class="divider-vertical"></li>
 										<li class='dropdown'><a class='dropdown-toggle'
-											data-toggle='dropdown'> <fmt:message key="index.menu.titre2"/> <b class='caret'></b></a>
+											data-toggle='dropdown'><fmt:message key="index.menu.titre2"/><b class='caret'></b></a>
 											<ul class='dropdown-menu'>
 												<li><a id='CarreLatin' onclick='insererEx(this.id)'> <fmt:message key="index.menu.titre2.soustitre1"/></a></li>
 												<li><a id='Sudoku2' onclick='insererEx(this.id)'><fmt:message key="index.menu.titre2.soustitre2"/></a></li>
 												<li><a id='Sudoku4' onclick='insererEx(this.id)'><fmt:message key="index.menu.titre2.soustitre3"/></a></li>
 												<li><a id='Sudoku9' onclick='insererEx(this.id)'><fmt:message key="index.menu.titre2.soustitre4"/></a></li>
 												<li><a id='MoutonChouLoup' onclick='insererEx(this.id)'><fmt:message key="index.menu.titre2.soustitre5"/></a></li>
-												<li><a id='Carte' onclick='insererEx(this.id)'>Coloriage
-														de cartes</a></li>
-												<li><a id='EmploiDuTemps' onclick='insererEx(this.id)'>Emploi
-														du Temps</a></li>
-												<li><a id='Somme' onclick='insererEx(this.id)'>Somme</a></li>
-												<li><a id='8Dames' onclick='insererEx(this.id)'>Les
-														8 Dames</a></li>
-												<li><a id='6Boules' onclick='insererEx(this.id)'>Les
-														6 boules</a></li>
+												<li><a id='Carte' onclick='insererEx(this.id)'><fmt:message key="index.menu.titre2.soustitre6"/></a></li>
+												<li><a id='EmploiDuTemps' onclick='insererEx(this.id)'><fmt:message key="index.menu.titre2.soustitre7"/></a></li>
+												<li><a id='Somme' onclick='insererEx(this.id)'><fmt:message key="index.menu.titre2.soustitre8"/></a></li>
+												<li><a id='8Dames' onclick='insererEx(this.id)'><fmt:message key="index.menu.titre2.soustitre9"/></a></li>
+												<li><a id='6Boules' onclick='insererEx(this.id)'><fmt:message key="index.menu.titre2.soustitre10"/></a></li>
 											</ul></li>
 										<li class="divider-vertical"></li>
 
 										<!-- un click sur l'onglet "Help", charge la page 'infos'-->
-										<li><a href='infos.jsp'>Help <i
-												class="icon-white icon-info-sign"></i></a></li>
+										<li><a href='infos.jsp'><fmt:message key="index.menu.titre3"/><i class="icon-white icon-info-sign"></i></a></li>
 												
 												
 										</li>
 										<li class="divider-vertical"></li>
 
 											<li class='dropdown'><a class='dropdown-toggle'
-											data-toggle='dropdown'> Language <b class='caret'></b></a>
+											data-toggle='dropdown'><fmt:message key="index.menu.titre4"/><b class='caret'></b></a>
 											<ul class='dropdown-menu'>
 												<li><a href="index.jsp?language=en"><img src="icons/flags/Angleterre.png"/></a></li>
 												<li><a href="index.jsp?language=fr"><img src="icons/flags/France.png"/></a></li>
@@ -137,7 +132,7 @@
 
 							<div class="accordion-heading">
 								<a class="accordion-toggle" href="#Formules"
-									data-toggle="collapse"> Basic constructions</a>
+									data-toggle="collapse"><fmt:message key="index.menu2.titre1"/></a>
 							</div>
 							<!--la zone des differents synboles de la construction basique-->
 
@@ -220,8 +215,7 @@
 						<div class="accordion-group well">
 							<!--la zone des differentes couleurs :"colors"-->
 							<div class="accordion-heading">
-								<a class="accordion-toggle" href="#Pays" data-toggle="collapse">
-									Countries </a>
+								<a class="accordion-toggle" href="#Pays" data-toggle="collapse"><fmt:message key="index.menu2.titre2"/></a>
 							</div>
 							<div id="Pays" class="collapse">
 								<div class="accordion-inner"></div>
@@ -264,7 +258,7 @@
 						<div class="accordion-group well">
 							<div class="accordion-heading">
 								<a class="accordion-toggle" href="#Couleurs"
-									data-toggle="collapse"> Colors </a>
+									data-toggle="collapse"><fmt:message key="index.menu2.titre3"/></a>
 							</div>
 							<div id="Couleurs" class="collapse">
 								<div class="accordion-inner"></div>
@@ -295,7 +289,7 @@
 						<div class="accordion-group well">
 							<div class="accordion-heading">
 								<a class="accordion-toggle" href="#Calendrier"
-									data-toggle="collapse"> Calendar </a>
+									data-toggle="collapse"><fmt:message key="index.menu2.titre4"/></a>
 							</div>
 							<div id="Calendrier" class="collapse">
 								<div class="accordion-inner"></div>
@@ -342,7 +336,7 @@
 						<div class="accordion-group well">
 							<div class="accordion-heading">
 								<a class="accordion-toggle" href="#Autres"
-									data-toggle="collapse"> Misc. </a>
+									data-toggle="collapse"><fmt:message key="index.menu2.titre5"/></a>
 							</div>
 							<div id="Autres" class="collapse">
 								<div class="accordion-inner"></div>
@@ -392,8 +386,7 @@
 								<div class='span7 offset2'>
 									<label class='btn-primary btn-large' id='resultButton'
 										onclick='javascript:afficheResult();'><i
-										class="icon-white icon-ok"></i> Test whether the set of
-										formulas is satisfiable</label>
+										class="icon-white icon-ok"></i> <fmt:message key="index.boutonok"/></label>
 								</div>
 							</div>
 							<div class='span8'>
@@ -431,7 +424,7 @@
 										<div class='span4 offset1' id='boutonAjout'>
 											<a href="javascript:ajoutInput();"
 												class="btn btn-success btn-large"><i
-												class="icon-white icon-plus-sign"></i> Add a new formula</a>
+												class="icon-white icon-plus-sign"></i><fmt:message key="index.boutonNouvelleFormule"/></a>
 										</div>
 										<img src="bootstrap/img/satrennespa.png" />
 										<!-- <div class='span4 offset2' id='boutonVider'><label class='btn btn-danger btn-large' onclick='viderNbInput(getNbInput());'><i class="icon-white icon-remove"></i> Delete all the formulas</label></div> -->
