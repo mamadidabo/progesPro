@@ -2,11 +2,18 @@
 
 package com.sdzee.forms;
 import java.util.HashMap;
+
+import com.sdzee.config.InitialisationDaoFactory;
+
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
 //import org.jasypt.util.password.ConfigurablePasswordEncryptor;
+
+
+
+
 
 
 import org.jasypt.util.password.ConfigurablePasswordEncryptor;
@@ -35,7 +42,7 @@ public final class InscriptionForm {
     public Map<String, String> getErreurs() {
         return erreurs;}
    
-    public Utilisateur inscrireUtilisateur( HttpServletRequest request ) {
+    public Utilisateur inscrireUtilisateur( HttpServletRequest request ) throws Exception {
         String email = getValeurChamp( request, CHAMP_EMAIL );
         String motDePasse = getValeurChamp( request, CHAMP_PASS );
         String confirmation = getValeurChamp( request, CHAMP_CONF );
@@ -75,7 +82,12 @@ public final class InscriptionForm {
         try {
        	 
            traiterEmail( email, utilisateur );
-           traiterMotsDePasse( motDePasse, confirmation, utilisateur );
+           try {
+			traiterMotsDePasse( motDePasse, confirmation, utilisateur );
+		} catch (FormValidationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
            traiterNom( nom, utilisateur );
            traiterPrenom( prenom, utilisateur );
         
@@ -125,7 +137,7 @@ public final class InscriptionForm {
     }
     
     
-    private void traiterEmail( String email, Utilisateur utilisateur ) {
+    private void traiterEmail( String email, Utilisateur utilisateur ) throws Exception {
         try {
             validationEmail( email );
         } catch ( FormValidationException e ) {
@@ -158,7 +170,7 @@ public final class InscriptionForm {
      * Appel à la validation des mots de passe reçus, chiffrement du mot de
      * passe et initialisation de la propriété motDePasse du bean
      */
-    private void traiterMotsDePasse( String motDePasse, String confirmation, Utilisateur utilisateur ) {
+    private void traiterMotsDePasse( String motDePasse, String confirmation, Utilisateur utilisateur ) throws FormValidationException  {
         try {
             validationMotsDePasse( motDePasse, confirmation );
         } catch ( FormValidationException e ) {
@@ -174,15 +186,23 @@ public final class InscriptionForm {
          * 
          * La String retournée est de longueur 56 et contient le hash en Base64.
          */
-        ConfigurablePasswordEncryptor passwordEncryptor = new ConfigurablePasswordEncryptor();  
+       /* ConfigurablePasswordEncryptor passwordEncryptor = new ConfigurablePasswordEncryptor();  
         passwordEncryptor.setAlgorithm( ALGO_CHIFFREMENT );
         passwordEncryptor.setPlainDigest( false );
         String motDePasseChiffre = passwordEncryptor.encryptPassword( motDePasse );
-        utilisateur.setMotDePasse( motDePasseChiffre );
+        utilisateur.setMotDePasse( motDePasseChiffre );*/
+       // SimpleCrypto simpleCrypto=new SimpleCrypto();
+        try {
+		String monMotdePasse=SimpleCrypto.encrypt("1234", motDePasse);
+		utilisateur.setMotDePasse(monMotdePasse);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
     }
     
     /* Validation de l'adresse email */
-    private void validationEmail( String email ) throws FormValidationException {
+    private void validationEmail( String email ) throws FormValidationException, Exception {
         if ( email != null ) {
             if ( !email.matches( "([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)" ) ) {
                 throw new FormValidationException( "Merci de saisir une adresse mail valide." );

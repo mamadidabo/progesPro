@@ -17,8 +17,24 @@ import org.joda.time.format.PeriodFormatterBuilder;*/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 import com.sdzee.beans.Utilisateur;
+import com.sdzee.dao.DAOException;
+import com.sdzee.dao.DAOFactory;
+import com.sdzee.dao.UtilisateurDao;
+import com.sdzee.dao.UtilisateurDaoImpl;
 import com.sdzee.forms.ConnexionForm;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -41,14 +57,19 @@ public class Connexion extends HttpServlet {
 	public static final String ATT_USER         = "utilisateur";
     public static final String ATT_FORM         = "form";
     public static final String ATT_SESSION_USER = "sessionUtilisateur";
-    public static final String VUE              = "/connexion.jsp";
-
+    public static final String VUE              = "/index.jsp";
+    public static final String CONF_DAO_FACTORY = "daofactory";
     public static final String  ATT_INTERVALLE_CONNEXIONS = "intervalleConnexions";
     public static final String  COOKIE_DERNIERE_CONNEXION = "derniereConnexion";
     public static final String  FORMAT_DATE               = "dd/MM/yyyy HH:mm:";
     public static final String  CHAMP_MEMOIRE             = "memoire";
     public static final int     COOKIE_MAX_AGE            = 60 * 60 * 24 * 365;  // 1 an
-    
+    UtilisateurDao   utilisateurDao;
+    Utilisateur utilisateur;
+    public void init() throws ServletException {
+        /* Récupération d'une instance de notre DAO Utilisateur */
+        this.utilisateurDao = ( (DAOFactory) getServletContext().getAttribute( CONF_DAO_FACTORY ) ).getUtilisateurDao();
+    }
     	public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
             /* Tentative de récupération du cookie depuis la requête */
             String derniereConnexion = getCookieValue( request, COOKIE_DERNIERE_CONNEXION );
@@ -80,11 +101,16 @@ public class Connexion extends HttpServlet {
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         /* Préparation de l'objet formulaire */
-        ConnexionForm form = new ConnexionForm();
+        ConnexionForm form = new ConnexionForm(utilisateurDao);
 
         /* Traitement de la requête et récupération du bean en résultant */
-      Utilisateur utilisateur=form.connecterUtilisateur(request);
-System.out.println("lklkj");
+      
+	try {
+		utilisateur = form.connecterUtilisateur(request);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
         /* Récupération de la session depuis la requête */
         HttpSession session = request.getSession();
 
@@ -92,11 +118,23 @@ System.out.println("lklkj");
          * Si aucune erreur de validation n'a eu lieu, alors ajout du bean
          * Utilisateur à la session, sinon suppression du bean de la session.
          */
-        if ( form.getErreurs().isEmpty() ) {
-            session.setAttribute( ATT_SESSION_USER, utilisateur );
-        } else {
-            session.setAttribute( ATT_SESSION_USER, null );
-        }
+        try {
+			if ( form.getErreurs().isEmpty()&&form.getResultat().equals("Connexion Reussie."))  {
+				System.out.println("ppppppp"+ form.getErreurs());
+				System.out.println("mmmmmmmmmm"+form.getResultat());
+     
+					session.setAttribute( ATT_SESSION_USER, utilisateur );
+					}
+			else {
+				session.setAttribute( ATT_SESSION_USER, null );
+			}
+		} catch (DAOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
         if ( request.getParameter( CHAMP_MEMOIRE ) != null ) {
             /* Récupération de la date courante */
@@ -116,7 +154,7 @@ System.out.println("lklkj");
         request.setAttribute( ATT_USER, utilisateur );
 
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
-    }
+    } 
     
     private static String getCookieValue( HttpServletRequest request, String nom ) {
         Cookie[] cookies = request.getCookies();

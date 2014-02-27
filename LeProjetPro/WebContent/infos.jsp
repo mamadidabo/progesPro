@@ -35,9 +35,41 @@
 <title>SATRennesPa</title>
 </head>
 <body>
-
-	<fmt:bundle basename="com.sdzee.language.Satrennespa">
+		<fmt:bundle basename="com.sdzee.language.Satrennespa">
 		<div class='container'>
+
+
+			<div class='span4' style='width: auto; float: left;'>
+				<nav class='navbar'>
+					<div class='navbar-inner'>
+						<ul class='nav'>
+
+
+							<li class='dropdown'><a class='dropdown-toggle'
+								data-toggle='dropdown'><fmt:message key="index.menu.titre4" /><b
+									class='caret'></b></a>
+								<ul class='dropdown-menu'>
+									<li><a href="infos.jsp?language=en"><img
+											src="icons/flags/Angleterre.png" /></a></li>
+									<li><a href="infos.jsp?language=fr"><img
+											src="icons/flags/France.png" /></a></li>
+								</ul></li>
+							<li class="divider-vertical"></li>
+
+							<li style='width: auto;'><a href="index.jsp">retour
+									index</a></li>
+
+
+
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+
+
+
+
 			<div id='page-content' class='page-content'>
 				<div class='page-content' id='page-content'>
 					<div class='span5 offset5'></div>

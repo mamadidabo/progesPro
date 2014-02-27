@@ -28,7 +28,7 @@ public class Inscription extends HttpServlet {
     public static final String VUE              = "/inscription.jsp";
 
     private UtilisateurDao     utilisateurDao;
-
+    Utilisateur utilisateur;
     public void init() throws ServletException {
         /* Récupération d'une instance de notre DAO Utilisateur */
         this.utilisateurDao = ( (DAOFactory) getServletContext().getAttribute( CONF_DAO_FACTORY ) ).getUtilisateurDao();
@@ -44,7 +44,12 @@ public class Inscription extends HttpServlet {
         InscriptionForm form = new InscriptionForm( utilisateurDao );
 
         /* Traitement de la requête et récupération du bean en résultant */
-        Utilisateur utilisateur = form.inscrireUtilisateur( request );
+         try {
+			utilisateur = form.inscrireUtilisateur( request );
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
         /* Stockage du formulaire et du bean dans l'objet request */
         request.setAttribute( ATT_FORM, form );

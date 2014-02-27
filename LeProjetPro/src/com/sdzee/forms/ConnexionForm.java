@@ -9,17 +9,15 @@ import org.jasypt.util.password.ConfigurablePasswordEncryptor;
 
 import com.sdzee.beans.Utilisateur;
 import com.sdzee.dao.DAOException;
-import com.sdzee.dao.DAOFactory;
 import com.sdzee.dao.UtilisateurDao;
-import com.sdzee.dao.UtilisateurDaoImpl;
+
 
 
 
 public final class ConnexionForm {
 	 private static final String CHAMP_EMAIL  = "email";
 	    private static final String CHAMP_PASS   = "motdepasse";
-	   // DAOFactory daofactory;
-    private static final String ALGO_CHIFFREMENT = "SHA-256";
+	    String monMotdePasse;
     private String resultat;
     private Map<String, String> erreurs = new HashMap<String, String>();
 
@@ -32,47 +30,46 @@ public final class ConnexionForm {
     }
     
     private UtilisateurDao utilisateurDao;
-  public ConnexionForm(  ) {
-	  this.utilisateurDao=new UtilisateurDaoImpl(new DAOF);
+  public ConnexionForm( UtilisateurDao utilisateurDao ) {
+    	 this.utilisateurDao= utilisateurDao;
     }
-    public Utilisateur connecterUtilisateur( HttpServletRequest request ) {
+    public Utilisateur connecterUtilisateur( HttpServletRequest request ) throws Exception {
 		/* Récupération des champs du formulaire */
 		String email = getValeurChamp( request, CHAMP_EMAIL );
 		String motDePasse = getValeurChamp( request, CHAMP_PASS );
 		Utilisateur utilisateur = new Utilisateur();
 			try {
-			/**
-			 * Utilisation de la bibliothèque Jasypt pour chiffrer le mot de pass éfficacement.
-			 *
-			 * L'algorithme SHA-256 est ici utilisé, avec par défaut un salage
-			 * aléatoire et un grand nombre d'itérations de la fonction de hashage.
-			 *
-			 * La String retournée est de longueur 56 et contient le hash en Base64.
-			 */
-			traiterMotsDePasse(motDePasse, utilisateur );
-			ConfigurablePasswordEncryptor passwordEncryptor = new ConfigurablePasswordEncryptor();
-			passwordEncryptor.setAlgorithm(ALGO_CHIFFREMENT );
-			passwordEncryptor.setPlainDigest(false);
-			String motDePasseChiffre = passwordEncryptor.encryptPassword(motDePasse);
-			utilisateur.setMotDePasse(motDePasseChiffre );
-
-			traiterEmail(email, utilisateur);
-			utilisateur.setEmail(email);
+				
+				traiterEmail(email, utilisateur);
+			
+				
+				  try {
+						traiterMotsDePasse( motDePasse, utilisateur );
+					} catch (Exception  e) {
+						// TODO Auto-generated catch block
+						setErreur(CHAMP_PASS,"votre mot de passe est erroné");
+						e.printStackTrace();
+					}
 			
 			if (erreurs.isEmpty() ) {
-				System.out.println(email);
-				System.out.println(utilisateurDao);
-				if(utilisateurDao.trouver(email) != null && utilisateurDao.trouver(motDePasse)!=null)
+				if(utilisateurDao.trouver(email)!=null && utilisateurDao.trouver2(monMotdePasse)!=null){
 				resultat = "Connexion Reussie.";
-			} else {
+			 
+				}
+			
+			
+			else {
 				resultat = "Échec de connexion.";
+			} } 
 			}
-		} catch ( DAOException e ) {
-			resultat = "Échec de connexion : une erreur imprévue est survenue, merci de réessayer dans quelques instants.";
+		 catch ( DAOException e ) {
+			resultat = "Échec de connexion";
 			e.printStackTrace();
 		}
 		return utilisateur;
-	}
+	
+    }
+
     
     private void validationMotsDePasse( String motDePasse ) throws FormValidationException {
         if ( motDePasse != null ) {
@@ -84,6 +81,8 @@ public final class ConnexionForm {
             throw new FormValidationException( "Merci de saisir et confirmer votre mot de passe." );}
         }
     
+    
+    
         private void traiterMotsDePasse( String motDePasse, Utilisateur utilisateur ) {
             try {
                 validationMotsDePasse( motDePasse );
@@ -91,21 +90,20 @@ public final class ConnexionForm {
                 setErreur( CHAMP_PASS, e.getMessage() );
   
             }
-            /*
-             * Utilisation de la bibliothèque Jasypt pour chiffrer le mot de passe
-             * efficacement.
-             * 
-             * L'algorithme SHA-256 est ici utilisé, avec par défaut un salage
-             * aléatoire et un grand nombre d'itérations de la fonction de hashage.
-             * 
-             * La String retournée est de longueur 56 et contient le hash en Base64.
-             */
-          ConfigurablePasswordEncryptor passwordEncryptor = new ConfigurablePasswordEncryptor();
-            passwordEncryptor.setAlgorithm( ALGO_CHIFFREMENT );
-            passwordEncryptor.setPlainDigest( false );
-            String motDePasseChiffre = passwordEncryptor.encryptPassword( motDePasse );
-            utilisateur.setMotDePasse( motDePasseChiffre );
-       }
+            try {
+        		monMotdePasse=SimpleCrypto.encrypt("1234", motDePasse);
+        		utilisateur.setMotDePasse(monMotdePasse);
+        		if(utilisateurDao.trouver(motDePasse)!=null){
+        			System.out.println("mot de passe incorrecte");
+        		}
+        		} catch (Exception e) {
+        			// TODO Auto-generated catch block
+        			e.printStackTrace();
+        		} 
+
+            
+        	
+        }
         
     /*
      * Ajoute un message correspondant au champ spécifié à la map des erreurs.

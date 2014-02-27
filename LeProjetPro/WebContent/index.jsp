@@ -91,8 +91,8 @@
 
 											<li class='dropdown'><a class='dropdown-toggle'
 											data-toggle='dropdown'><fmt:message key="index.menu.titre4"/><b class='caret'></b></a>
-											<ul class='dropdown-menu'>
-												<li><a href="index.jsp?language=en"><img src="icons/flags/Angleterre.png"/></a></li>
+											<ul class='dropdown-menu' >
+												<li><a href="index.jsp?language=en" ><img src="icons/flags/Angleterre.png"/></a></li>
 												<li><a href="index.jsp?language=fr"><img src="icons/flags/France.png"/></a></li>
 											</ul></li>		
 										
@@ -100,12 +100,25 @@
 								</div>
 							</nav>
 						</div>
+						</form>
+							<!-- START DIV Barre personnel 
+					
+					si anomyne : connection
+					si connecte : mon compte et deconnection -->
+					
+					
+					<%@include file="barrePerso.jsp" %>
+
+					<!-- END barre perso -->	
+						
+						
+						
 						<div class='span5 offset1'>
 
 							<div id='ErrorOrDescriptionDiv' style='display: none;'></div>
 						</div>
 					</div>
-				</form>
+				
 
 				<!-- palette d'outils-->
 
