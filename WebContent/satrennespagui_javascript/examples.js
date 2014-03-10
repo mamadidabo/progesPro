@@ -21,26 +21,10 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox5'].value= "((((((((p 1 1 2) and (p 1 2 1)) and ((p 1 3 3) and (p 2 1 1))) and (p 2 2 3)) and (p 2 3 1)) and (p 3 1 1)) and (p 3 2 2)) and (p 3 3 3))";
 		    		updateLaTeX("((((((((p 1 1 2) and (p 1 2 1)) and ((p 1 3 3) and (p 2 1 1))) and (p 2 2 3)) and (p 2 3 1)) and (p 3 1 1)) and (p 3 2 2)) and (p 3 3 3))",'textBox5');    		
 		    		
-		    		afficheDescription("Carr&eacute Latin","Le but du jeu est de remplir un tableau de 3 lignes et 3 colonnes contenant des chiffres allant de 1 &agrave 3 en veillant toujours &agrave ce qu'un m&ecircme chiffre ne figure qu'une seule fois par colonne, une seule fois par ligne, et une seule fois par carr&eacute de neuf cases.");
+		    		afficheDescription("Carr&eacute Latin / Latin square","Un carr&eacute latin est un tableau carr&eacute de n lignes et n colonnes remplies de n &eacutel&eacutements distincts dont chaque ligne et chaque colonne ne contient qu'un seul exemplaire. <br /> <br /> A Latin square is a square array of n rows and n columns filled with n distinct elements which each line and each column only contains a single copy.");
 		    		
 		    	break;
-		    	case 'Sudoku2':
-		    		setNbInput(5);
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox1'].value= "(bigand i (1 2) (bigand j (1 2) (bigor n (1 2) (p i j n))))";
-		    		updateLaTeX("(bigand i (1 2) (bigand j (1 2) (bigor n (1 2) (p i j n))))",'textBox1');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox2'].value= "(bigand i (1 2) (bigand j (1 2) (bigand n (1 2)  (bigand m (1 2)  (m diff n) ((p i j n) imply (not (p i j m)))))))";
-		    		updateLaTeX("(bigand i (1 2) (bigand j (1 2) (bigand n (1 2)  (bigand m (1 2)  (m diff n) ((p i j n) imply (not (p i j m)))))))",'textBox2');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox3'].value= "(bigand i (1 2) (bigand n (1 2)  (bigor j (1 2) (p i j n))))";
-		    		updateLaTeX("(bigand i (1 2) (bigand n (1 2)  (bigor j (1 2) (p i j n))))",'textBox3');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox4'].value= "(bigand j (1 2) (bigand n (1 2)  (bigor i (1 2) (p i j n))))";
-		    		updateLaTeX("(bigand j (1 2) (bigand n (1 2)  (bigor i (1 2) (p i j n))))",'textBox4');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox5'].value= "((p 1 1 2) and (p 1 2 1))";
-		    		updateLaTeX("((p 1 1 2) and (p 1 2 1))",'textBox5');   	
 		    	
-		    		afficheDescription("Sudoku 2X2","Le but du jeu est de remplir un tableau de 2 lignes X 2 colonnes contenant des chiffres allant de 1 &agrave 9 en veillant toujours &agrave ce qu'un m&ecircme chiffre ne figure qu'une seule fois par colonne et une seule fois par ligne.");
-			    	
-		    		
-		    	break;
 		    	case 'Sudoku4':
 		    		setNbInput(10);
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox1'].value= "(bigand i (1 .. 4) (bigand j (1 .. 4) (bigor n (1 .. 4) (p i j n))))";
@@ -64,7 +48,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox10'].value= "((p 1 1 2) and ((p 1 3 2) and (p 3 4 4)))";
 		    		updateLaTeX("((p 1 1 2) and ((p 1 3 2) and (p 3 4 4)))",'textBox10');
 		    		
-		    		afficheDescription("Sudoku 4X4","Le but du jeu est de remplir 4 lignes X 4 colonnes cases contenant des chiffres allant de 1 &agrave 9 en veillant toujours &agrave ce qu'un m&ecircme chiffre ne figure qu'une seule fois par colonne et une seule fois par ligne.");
+		    		afficheDescription("Sudoku 4X4","Le but du jeu est de remplir 4 lignes X 4 colonnes cases contenant des chiffres allant de 1 &agrave 4 en veillant toujours &agrave ce qu'un m&ecircme chiffre ne figure qu'une seule fois par colonne et une seule fois par ligne. <br /> <br /> The goal is to fill an array of 4 lines x 4 columns with numbers from 1 to 4 by always ensuring that the same number appears only once in each column and only once per line.");
 		    		
 			    break;
 		    	case 'Sudoku9':
@@ -102,7 +86,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox16'].value="((p 7 1 7) and (p 7 2 1) and (p 7 3 4) and (p 7 9 9) and (p 8 2 2) and (p 8 7 8) and (p 9 4 4) and (p 9 8 3))";
 		    		updateLaTeX("((p 7 1 7) and (p 7 2 1) and (p 7 3 4) and (p 7 9 9) and (p 8 2 2) and (p 8 7 8) and (p 9 4 4) and (p 9 8 3))",'textBox16');
 		    	
-		    		afficheDescription("Sudoku 9X9","Le but du jeu est de remplir 81 cases contenant des chiffres allant de 1 &agrave 9 en veillant toujours &agrave ce qu'un m&ecircme chiffre ne figure qu'une seule fois par colonne, une seule fois par ligne, et une seule fois par carr&ecute de neuf cases.");
+		    		afficheDescription("Sudoku 9X9","Le but du jeu est de remplir 81 cases contenant des chiffres allant de 1 &agrave 9 en veillant toujours &agrave ce qu'un m&ecircme chiffre ne figure qu'une seule fois par colonne, une seule fois par ligne, et une seule fois par carr&ecute de neuf cases. <br /> <br /> The goal is to fill an array of 9 lines x 9 columns with numbers from 1 to 9 by always ensuring that the same number appears only once in each column and only once per line.");
 		    			
 		    	break;
 			    
@@ -129,7 +113,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox10'].value="(bigand t (0 .. 6) ((barque droite t) equiv (not (barque droite (t + 1)))))";
 		    		updateLaTeX("(bigand t (0 .. 6) ((barque droite t) equiv (not (barque droite (t + 1)))))",'textBox10');
 		    	
-		    		afficheDescription("Mouton Chou Loup","Une barque doit faire passer le chou, le mouton et le loup de l'autre c&ocirct&eacute de la rivi&egravere. Mais il n'a qu'une place sur la barque ! De plus, si le mouton et le chou sont ensemble sur une rive quand la barque s'&eacuteloigne, le mouton mange le chou. Et si le loup et le mouton sont ensemble quand Lulu s'&eacuteloigne, le loup mange le mouton !");
+		    		afficheDescription("Mouton Chou Loup / Sheep Wolf Cabbage","Une barque doit faire passer le chou, le mouton et le loup de l'autre c&ocirct&eacute de la rivi&egravere. Mais il n'a qu'une place sur la barque ! De plus, si le mouton et le chou sont ensemble sur une rive quand la barque s'&eacuteloigne, le mouton mange le chou. Et si le loup et le mouton sont ensemble quand la barque s'&eacuteloigne, le loup mange le mouton ! <br /> <br /> A boat must put cabbage, sheep and the wolf on the other side of the river. But he has a place on the boat! In addition, if the sheep and cabbage are all on shore when the boat moves away, the sheep eats the cabbage. And if the wolf and the sheep are set when the boat moves away, the wolf eats the sheep!");
 		    		
 		    	break;
 		    	
@@ -153,7 +137,7 @@
 		    		setFormula(12, "(bigand c (Rouge Bleu Vert Jaune) ((not (Belgique c)) or (not (France c))))");
 		    		setFormula(13, "(bigand c (Rouge Bleu Vert Jaune) ((not (Belgique c)) or (not (Allemagne c))))");
 				
-		    		afficheDescription("Carte","");
+		    		afficheDescription("Coloriage de carte / Map coloring","Ce probl&egraveme indique qu'il est possible, en n'utilisant que quatre couleurs diff&eacuterentes, de colorier n'importe quelle carte d&eacutecoup&eacutee en r&eacutegions connexes, de sorte que deux r&eacutegions ayant une fronti&egravere en commun soit de deux couleurs distinctes. <br /> <br /> This problem shows that it is possible, by using only four different colors, coloring any map cut into connected regions so that two regions having a common border or of two distinct colors");
 		    		
 		    	break;
 		    	case 'EmploiDuTemps':
@@ -173,7 +157,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox7'].value= "(bigor c (matin aprem) (philo lundi c))";
 		    		updateLaTeX("(bigor c (matin aprem) (philo lundi c))",'textBox7');
 		    	
-		    		afficheDescription("Emploi Du Temps","");
+		    		afficheDescription("Emploi Du Temps / schedule","Le probl&egraveme est de remplir un emploi du temps avec des contraintes sp&eacutecifique. <br /> <br /> The problem is to fill a schedule with specific constraints.");
 		    		
 		    	break;
 		    	case 'Somme':
@@ -189,7 +173,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox5'].value= "((not (b 2)) and (not (b 1)) and (not (a 2)))";
 		    		updateLaTeX("((not (b 2)) and (not (b 1)) and (not (a 2)))",'textBox5'); 
 		    		
-		    		afficheDescription("Somme","Permet de trouver les chiffres binaires dans une addition manquante. <br /> <br /> Allows you to find the missing bits in addition.");
+		    		afficheDescription("Somme / Sum","Permet de trouver les chiffres binaires dans une addition manquante. <br /> <br /> Allows you to find the missing bits in addition.");
 		    		
 		    	break;
 		    	case '8Dames':
@@ -207,7 +191,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox6'].value= "(bigand i (1 .. 8) (bigand j (1 .. 8) ((p i j) imply (bigand k (1 .. 8) ((not (p (i+k) (j-k))) and (not (p (i-k) (j+k))))))))";
 		    		updateLaTeX("(bigand i (1 .. 8) (bigand j (1 .. 8) ((p i j) imply (bigand k (1 .. 8) ((not (p (i+k) (j-k))) and (not (p (i-k) (j+k))))))))",'textBox6');    
 		    	
-		    		afficheDescription("Les 8 Dames","");
+		    		afficheDescription("Les 8 Dames / 8 queens","Le but du probl&egraveme des huit dames est de placer huit dames d'un jeu d'&eacutechecs sur un &eacutechiquier de 8 × 8 cases sans que les dames ne puissent se menacer mutuellement, conform&eacutement aux r&egravegles du jeu d'&eacutechecs (la couleur des pi&egraveces est ignor&eacutee). Par cons&eacutequent, deux dames ne devraient jamais partager la m&ecircme rang&eacutee, colonne, ou diagonale. <br /> <br /> The goal of the problem is to place eight ladies eight ladies of a chess game on an 8 × 8 chessboard without boxes that ladies can not threaten each other according to the rules of chess (the color of the parts is ignored). Therefore, two ladies should never share the same row, column, or diagonal.");
 		    		
 		    	break;
 		    	case '6Boules':
@@ -225,7 +209,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox6'].value= "(b 6 Bleu)";
 		    		updateLaTeX("(b 6 Bleu)",'textBox6');   
 		    		
-		    		afficheDescription("Les 6 Boules","");
+		    		afficheDescription("Les 6 Boules / 6 balls","");
 		    		
 		    	break;
 	    	}
