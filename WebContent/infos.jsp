@@ -1,0 +1,171 @@
+<%@ page pageEncoding='UTF-8'%>
+<!-- We set the page encoding  -->
+
+<!-- Java importations -->
+<%@  page import="java.util.*"%>
+<%@  page import="org.apache.*"%>
+<!-- <%@  page import="satoulouse.*"%> -->
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<c:set var="language"
+	value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
+	scope="session" />
+<fmt:setLocale value="${language}" />
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<!-- Bootstrap importations -->
+<link rel='stylesheet' href='bootstrap/css/bootstrap.min.css'
+	type='text/css' />
+<link rel='stylesheet' href='bootstrap/css/bootstrap-responsive.css'
+	type='text/css' />
+<script src='bootstrap/js/jquery.js'></script>
+<script src='bootstrap/js/bootstrap.js'></script>
+
+<!-- LateX importation that permits to display LateX formulas -->
+<script type="text/javascript"
+	src="http://latex.codecogs.com/latexit.js"></script>
+<script src='satrennespagui_javascript/interpreter.js'></script>
+<script src='satrennespagui_javascript/scheme_to_html.js'></script>
+<script src='satrennespagui_javascript/gui.js'></script>
+<script src='satrennespagui_javascript/examples.js'></script>
+<title>SATRennesPa</title>
+</head>
+<body>
+		<fmt:bundle basename="com.sdzee.language.Satrennespa">
+		<div class='container'>
+
+
+			<div class='span4' style='width: auto; float: left;'>
+				<nav class='navbar'>
+					<div class='navbar-inner'>
+						<ul class='nav'>
+
+
+							<li class='dropdown'><a class='dropdown-toggle'
+								data-toggle='dropdown'><fmt:message key="index.menu.titre4" /><b
+									class='caret'></b></a>
+								<ul class='dropdown-menu'>
+									<li><a href="infos.jsp?language=en"><img
+											src="icons/flags/Angleterre.png" /></a></li>
+									<li><a href="infos.jsp?language=fr"><img
+											src="icons/flags/France.png" /></a></li>
+								</ul></li>
+							<li class="divider-vertical"></li>
+
+							<li style='width: auto;'><a href="index.jsp">retour
+									index</a></li>
+
+
+
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+
+
+
+
+			<div id='page-content' class='page-content'>
+				<div class='page-content' id='page-content'>
+					<div class='span5 offset5'></div>
+					<div class='row-fluid'>
+						<div class='span12'>
+							<div id='infosEng'>
+								<img src="bootstrap/img/satrennespa.png" />
+								<p>
+									<fmt:message key="infos.intro" />
+								</p>
+								<br />
+								<h3>
+									<fmt:message key="infos.aide" />
+								</h3>
+								<p>
+									<strong><fmt:message key="infos.synthaxique1" /></strong> <br />
+									<fmt:message key="infos.synthaxique2" />
+								</p>
+								<br />
+								<blockquote>
+									&lt;phi&gt;, &lt;psi&gt; ::= &lt;atomicproposition&gt; | (not
+									&lt;phi&gt;) | (&lt;phi&gt; or &lt;psi&gt;) | <br />
+									(&lt;phi&gt; and &lt;psi&gt;) | (bigand &lt;var&gt; &lt;set&gt;
+									&lt;phi&gt;) | (bigor &lt;var&gt; &lt;phi&gt;) | <br />
+									(bigand &lt;var&gt; &lt;set&gt; &lt;booleanexpression&gt;
+									&lt;phi&gt;) | <br />(bigor &lt;var&gt; &lt;set&gt;
+									&lt;booleanexpression&gt; &lt;phi&gt;) <br />
+									&lt;booleanexpression&gt; ::= (&lt;expression&gt; diff
+									&lt;expression&gt;) <br /> &lt;expression&gt; ::= &lt;var&gt;
+									| &lt;number&gt; | (&lt;expression&gt; + &lt;expression&gt;) <br />
+									&lt;var&gt; ::= any symbols (example: i, j, a) <br />
+									&lt;set&gt; ::= (&lt;expression&gt; .. &lt;expression&gt;) |
+									(&lt;expression&gt; &lt;expression&gt;
+									&lt;expression&gt;........) <br /> &lt;number&gt; ::= 0, 1, 2,
+									3 etc. <br /> &lt;atomicproposition&gt; ::= any symbols |
+									(symbol &lt;expression&gt; &lt;expression&gt;.........)
+								</blockquote>
+								<br /> <strong> <fmt:message key="infos.exemple" />
+								</strong> <br />
+								<blockquote>
+									p <br /> (p and q) <br /> (p and (not q)) <br /> (not p) <br />
+									(not (p or (not q))) <br /> (bigand i (1 2 3) (p i)) <br />
+									(bigand i (1 .. 12) (p i)) <br /> (bigand i (1 2 3) ((p i) or
+									(q i))) <br /> (bigand i (1 .. 12) (bigor j (1 .. 10) (i diff
+									j) ((p i) or (q j))))
+								</blockquote>
+								<br /> <strong><fmt:message key="infos.badexemple" /></strong>
+								<br />
+								<blockquote>
+									p and q <br /> and p q <br /> (and p q) <br /> (p and not q)
+									<br /> etc.
+								</blockquote>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<h3>
+					<fmt:message key="infos.history0" />
+				</h3>
+				<div class='page-footer'>
+					<fmt:message key="infos.history1" />
+					<a href='http://www.irit.fr/satoulouse/'>Satoulouse</a>
+					<fmt:message key="infos.history2" />
+					<div class='span12'>
+						<a
+							href='http://www.irit.fr/-Publications-?code=143&amp;nom=Gasquet%20Olivier'>Olivier
+							Gasquet</a>, <a
+							href='http://www.irit.fr/-Publications-?code=4350&amp;nom=Schwarzentruber%20Fran%C3%A7ois'>Fran&ccedil;ois
+							Schwarzentruber</a>, <a
+							href='http://www.irit.fr/-Publications-?code=3342&amp;nom=Strecker%20Martin'>Martin
+							Strecker</a>. <a href='http://www.irit.fr/satoulouse/'>Satoulouse</a>:
+						the computational power of propositional logic shown to beginners
+						(regular paper). Dans : Third International Congress on Tools for
+						Teaching Logic, Salamanca (Spain), 01/06/2011-04/06/2011, <a
+							href='http://link.springer.com/'>Springer</a>, 2011. <a
+							href='http://dbweb.irit.fr:8902/publi/publi.affiche_bibtex?code=12433'>BibTeX</a>
+						<br />
+					</div>
+					<br /> <br /> <br /> <br /> <br />
+					<fmt:message key="infos.history3" />
+					<a href='mailto:bourdel.maxime[aat]hotmail.fr'>Maxime Bourdel</a>
+					<fmt:message key="infos.history4" />
+					<a href='mailto:brendan.carnot[aat]gmail.com'>Brendan Carnot</a>
+					<fmt:message key="infos.history5" />
+					<div class='span12'>
+						<a href='index.jsp'>
+							<button class='btn-primary'>
+								<i class="icon-white icon-arrow-left"></i>
+								<fmt:message key="infos.back" />
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</fmt:bundle>
+</body>
+</html>
