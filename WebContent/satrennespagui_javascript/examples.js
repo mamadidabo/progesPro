@@ -189,7 +189,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox5'].value= "((not (b 2)) and (not (b 1)) and (not (a 2)))";
 		    		updateLaTeX("((not (b 2)) and (not (b 1)) and (not (a 2)))",'textBox5'); 
 		    		
-		    		afficheDescription("Somme","");
+		    		afficheDescription("Somme","Permet de trouver les chiffres binaires dans une addition manquante. <br /> <br /> Allows you to find the missing bits in addition.");
 		    		
 		    	break;
 		    	case '8Dames':
