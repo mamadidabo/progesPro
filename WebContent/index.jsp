@@ -107,8 +107,7 @@
 					si connecte : mon compte et deconnection -->
 					
 					
-					<%@include file="barrePerso.jsp" %>
-
+					
 					<!-- END barre perso -->	
 						
 						
@@ -149,12 +148,12 @@
 									</a> <a class='btn' id='q' title="Insert q proposition"
 										onclick="return insertValue(this.id);"> <img
 										src="http://latex.codecogs.com/gif.latex?q" border="0" />
-									</a> <a class='btn' id='p(i)' title="Insert (p i) proposition"
+									</a> <a class='btn' id='(p i)' title="Insert (p i) proposition"
 										onclick="return insertValue(this.id);"> <img
-										src="http://latex.codecogs.com/gif.latex?p_{i}" border="0" />
-									</a> <a class='btn' id='p(i+1)' title="Insert p(i+1) proposition"
+										src="http://latex.codecogs.com/gif.latex?{(p\;i)}" border="0" />
+									</a> <a class='btn' id='(p(i+1))' title="Insert (p(i+1)) proposition"
 										onclick="return insertValue(this.id);"> <img
-										src="http://latex.codecogs.com/gif.latex?p_{\left(i+1\right)}"
+										src="http://latex.codecogs.com/gif.latex?{\left%20(p(\left i+1)\right})"
 										border="0" />
 									</a> <a class='btn' id='p(i,j)' title="Insert p(i,j) proposition"
 										onclick="return insertValue(this.id);"> <img
