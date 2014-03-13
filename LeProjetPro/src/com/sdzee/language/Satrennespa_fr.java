@@ -27,6 +27,10 @@ public class Satrennespa_fr extends ListResourceBundle{
 		{"index.menu2.titre3","Couleurs"},
 		{"index.menu2.titre4","Calendrier"},
 		{"index.menu2.titre5","Divers"},
+		{"index.menu.inscription","inscription"},
+		{"index.menu.connect","connection"},
+		{"index.menu.titre2.mdp","Mdp"},	
+		
 		{"index.boutonok","Vérifier si l'ensemble des formules est satisfiable"},
 		{"index.boutonNouvelleFormule","Ajout d'une nouvelle formule"},
 		{"inscription.titre","Inscription"},

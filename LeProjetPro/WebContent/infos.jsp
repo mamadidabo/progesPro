@@ -1,75 +1,4 @@
-<%@ page pageEncoding='UTF-8'%>
-<!-- We set the page encoding  -->
-
-<!-- Java importations -->
-<%@  page import="java.util.*"%>
-<%@  page import="org.apache.*"%>
-<!-- <%@  page import="satoulouse.*"%> -->
-
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<c:set var="language"
-	value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
-	scope="session" />
-<fmt:setLocale value="${language}" />
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset='utf-8' />
-<!-- Bootstrap importations -->
-<link rel='stylesheet' href='bootstrap/css/bootstrap.min.css'
-	type='text/css' />
-<link rel='stylesheet' href='bootstrap/css/bootstrap-responsive.css'
-	type='text/css' />
-<script src='bootstrap/js/jquery.js'></script>
-<script src='bootstrap/js/bootstrap.js'></script>
-
-<!-- LateX importation that permits to display LateX formulas -->
-<script type="text/javascript"
-	src="http://latex.codecogs.com/latexit.js"></script>
-<script src='satrennespagui_javascript/interpreter.js'></script>
-<script src='satrennespagui_javascript/scheme_to_html.js'></script>
-<script src='satrennespagui_javascript/gui.js'></script>
-<script src='satrennespagui_javascript/examples.js'></script>
-<title>SATRennesPa</title>
-</head>
-<body>
-		<fmt:bundle basename="com.sdzee.language.Satrennespa">
 		<div class='container'>
-
-
-			<div class='span4' style='width: auto; float: left;'>
-				<nav class='navbar'>
-					<div class='navbar-inner'>
-						<ul class='nav'>
-
-
-							<li class='dropdown'><a class='dropdown-toggle'
-								data-toggle='dropdown'><fmt:message key="index.menu.titre4" /><b
-									class='caret'></b></a>
-								<ul class='dropdown-menu'>
-									<li><a href="infos.jsp?language=en"><img
-											src="icons/flags/Angleterre.png" /></a></li>
-									<li><a href="infos.jsp?language=fr"><img
-											src="icons/flags/France.png" /></a></li>
-								</ul></li>
-							<li class="divider-vertical"></li>
-
-							<li style='width: auto;'><a href="index.jsp">retour
-									index</a></li>
-
-
-
-						</ul>
-					</div>
-				</nav>
-			</div>
-
-
-
-
-
 			<div id='page-content' class='page-content'>
 				<div class='page-content' id='page-content'>
 					<div class='span5 offset5'></div>
@@ -155,17 +84,9 @@
 					<fmt:message key="infos.history4" />
 					<a href='mailto:brendan.carnot[aat]gmail.com'>Brendan Carnot</a>
 					<fmt:message key="infos.history5" />
-					<div class='span12'>
-						<a href='index.jsp'>
-							<button class='btn-primary'>
-								<i class="icon-white icon-arrow-left"></i>
-								<fmt:message key="infos.back" />
-							</button>
-						</a>
-					</div>
+					
 				</div>
 			</div>
 		</div>
-	</fmt:bundle>
-</body>
-</html>
+
+

@@ -68,7 +68,7 @@
 		    		
 			    break;
 		    	case 'Sudoku9':
-		    		setNbInput(16);			
+		    		setNbInput(16);	
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox1'].value="(bigand i (1 .. 9) (bigand j (1 .. 9) (bigor n (1 .. 9) (p i j n))))";
 		    		updateLaTeX("(bigand i (1 .. 9) (bigand j (1 .. 9) (bigor n (1 .. 9) (p i j n))))",'textBox1');
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox2'].value="(bigand i (1 .. 9) (bigand j (1 .. 9) (bigand n (1 .. 9)  (bigand m (1 .. 9)  (m diff n) ((p i j n) imply (not (p i j m)))))))";
@@ -108,6 +108,7 @@
 			    
 		    	case 'MoutonChouLoup':
 		    		setNbInput(10);
+		    		
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox1'].value="(bigand t (0 .. 7) (((loup droite t) and (mouton droite t)) imply (barque droite t)))";
 		    		updateLaTeX("(bigand t (0 .. 7) (((loup droite t) and (mouton droite t)) imply (barque droite t)))",'textBox1');
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox2'].value="(bigand t (0 .. 7) (((mouton droite t) and (chou droite t)) imply (barque droite t)))";
