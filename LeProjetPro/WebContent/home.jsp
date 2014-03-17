@@ -258,8 +258,17 @@
 	</div>
 	<!--la zone centrale principale-->
 	<div class='span8'>
+	
+		
+						
+						
 		<form class='form-horizontal well' id='formulaire_satisfiabilite'>
 			<div class='row-fluid'>
+			
+		
+			<div id='ErrorOrDescriptionDiv' style='display: none;width: auto'></div>
+	
+			
 				<div class='span7 offset2'>
 					<label class='btn-primary btn-large' id='resultButton'
 						onclick='javascript:afficheResult();'><i

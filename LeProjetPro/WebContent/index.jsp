@@ -34,8 +34,7 @@
 <script src='satrennespagui_javascript/examples.js'></script>
 <title>SATRennesPa</title>
 
-</head>
-<body onload="majbodly()">
+<body>
 
 	<fmt:bundle basename="com.sdzee.language.Satrennespa">
 		<div class='container'>
@@ -69,8 +68,8 @@
 				<c:when test="${pageA == 'ex'}">
 					<%@include file="home.jsp"%>
 					<script type="text/javascript">						
-						var id = "<c:out value="${id}" />";				
-						insererEx(id);
+						id = "<c:out value="${id}" />";				
+						
 					</script>				
 				</c:when>
 				<c:when test="${pageA == 'infos'}">
@@ -91,11 +90,16 @@
 
 	</fmt:bundle>
 
+<script>
+//insererEx(id)
+bobby();
+
+</script>
+
 </body>
 
 
 </html>
-
 
 
 

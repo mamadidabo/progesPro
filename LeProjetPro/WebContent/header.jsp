@@ -12,13 +12,13 @@
 					<div class='row-fluid'>
 						<!--la zone des ongles New problem, examples, Help -->
 
-						<div class='span4'>
+						<div class='span4' style='width: auto; float: left;' >
 							<!--bloc gauche-->
-							<nav class='navbar' width='800px'>
+							<nav class='navbar'>
 								<!--zone de renvoi de requête-->
 
 								<div class='navbar-inner'>
-									<ul class='nav' width='800px'>
+									<ul class='nav' >
 										<!--
 			la partie en tête gauche qui regroupe:
 			la création d'un nouveau problème "New problem"
@@ -43,7 +43,7 @@
 										<li class="divider-vertical"></li>
 
 										<!-- un click sur l'onglet "Help", charge la page 'infos'-->
-										<li><a id ='infos' href="index.jsp?pageA=infos"><fmt:message key="index.menu.titre3"/><i class="icon-white icon-info-sign"></i></a></li>
+										<li><a id ='infos'  onclick='infos()' ><fmt:message key="index.menu.titre3"/><i class="icon-white icon-info-sign"></i></a></li>
 												
 												
 										</li>
@@ -73,10 +73,7 @@
 						
 						
 						
-						<div class='span5 offset1'>
-
-							<div id='ErrorOrDescriptionDiv' style='display: none;'></div>
-						</div>
+					
 					</div>
 
 				
@@ -92,14 +89,25 @@ function insererExH(id)
 		insererEx(id);	
 	}
 	else
-			{
-		
+		{
 		document.location.href="index.jsp?pageA=ex&id="+id;	
 		
 		}
 	
 }
 
+function infos()
+{
+
+var page = "<c:out value="${pageA}" />";
+	
+	if ( page != 'infos' )
+	{
+		document.location.href="index.jsp?pageA=infos";
+	}
+	
+	
+	}
 </script>
 
 </body>
