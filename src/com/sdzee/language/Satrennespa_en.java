@@ -53,6 +53,9 @@ public class Satrennespa_en extends ListResourceBundle{
 		{"infos.history3","The online tool SATRennesPa was then adapted to the web by two students in 3rd year of Licence MIAGE in Rennes: "},
 		{"infos.history4","and"},
 		{"infos.history5","under the supervision of Sophie Pinchinat and François Schwarzentruber."},
-		{"infos.back","Return to Homepage!"}
+		{"infos.back","Return to Homepage!"},
+		{"index.menu.inscription","Sign-in"},
+		{"index.menu.connect","log-in"},
+		{"index.menu.titre2.mdp","Password"}
 	};
 }
