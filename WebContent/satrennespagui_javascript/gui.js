@@ -1,4 +1,5 @@
 
+		var parenthese = 0;
 		var nbInput = 0;
 		//variable globale stockant le nombre d'inputs prÃ©sents dans la page 
 		window.onload = function(){nbInput = compterNbInput();};
@@ -86,7 +87,17 @@
 	
 	
 	
-	
+	   function compteur(expr) {
+	      
+			for(var i=0;i<=expr.length;i++){
+				if(expr.charAt(i) == ")"){
+					parenthese--;
+				}
+				if(expr.charAt(i) == "("){
+					parenthese++;
+				}
+			}
+	   }
 	
 	
 	
@@ -287,13 +298,24 @@
 					var contenuInput = updateHTML(document.getElementById("formulaire_satisfiabilite").elements['textBox'+i].value);
 					//puis on met au format textbox1=(...)&textbox2=(...)textbox3=(...) ...
 					value += document.getElementById("formulaire_satisfiabilite").elements['textBox'+i].id + "=" + contenuInput + "&";
+					compteur(contenuInput);
 				}
-				value+="compteurErreur=1&nbInput="+getNbInput();
-				
+				value+="compteurErreur=1&compteur="+parenthese+"&nbInput="+getNbInput();
+				if(parenthese != 0){
+					if(parenthese > 0){
+						afficheErreur("Il manque "+parenthese+" parentheses fermantes !");
+					}else{
+						parenthese = Math.abs(parenthese);
+						afficheErreur("Il manque "+parenthese+" parentheses ouvrantes !");
+					}
+					parenthese =0;
+				}else{
+					parenthese =0;
+					window.open('result.jsp' + value, "Resultat", "location=1, status=1, scrollbars=1, width=800, height=455"); 
+				}
 				//au final on a value = result.jsp?textBox1=(...)&textBox2=(...) ... &compteurErreur=1&nbInput=(nombre d'inputs) 
 						
 				//on ouvre la fenetre popup 
-				window.open('result.jsp' + value, "Resultat", "location=1, status=1, scrollbars=1, width=800, height=455"); 
 			}
 			else{
 				afficheErreur("Vous devez remplir au moins le 1er champ texte !");
