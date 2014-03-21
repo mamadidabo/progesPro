@@ -37,20 +37,18 @@
 		    		updateLaTeX("(bigand i (1 .. 4) (bigand j (1 .. 4) (bigand n (1 .. 4)  (bigand m (1 .. 4)  (m diff n) ((p i j n) imply (not (p i j m)))))))",'textBox2');
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox3'].value= "(bigand n (1 .. 4) (bigand i (1 .. 4) (bigor j (1 .. 4) (p i j n))))";
 		    		updateLaTeX("(bigand n (1 .. 4) (bigand i (1 .. 4) (bigor j (1 .. 4) (p i j n))))",'textBox3'); 
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox4'].value= "(bigand n (1 .. 4) (bigand i (1 .. 4) (bigor j (1 .. 4) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigand i (1 .. 4) (bigor j (1 .. 4) (p i j n))))",'textBox4');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox5'].value= "(bigand n (1 .. 4) (bigand j (1 .. 4) (bigor i (1 .. 4) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigand j (1 .. 4) (bigor i (1 .. 4) (p i j n))))",'textBox5');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox6'].value= "(bigand n (1 .. 4) (bigor i (1 2) (bigor j (1 2) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (1 2) (bigor j (1 2) (p i j n))))",'textBox6');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox7'].value= "(bigand n (1 .. 4) (bigor i (1 2) (bigor j (3 4) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (1 2) (bigor j (3 4) (p i j n))))",'textBox7');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox8'].value= "(bigand n (1 .. 4) (bigor i (3 4) (bigor j (1 2) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (3 4) (bigor j (1 2) (p i j n))))",'textBox8');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox9'].value= "(bigand n (1 .. 4) (bigor i (3 4) (bigor j (3 4) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (3 4) (bigor j (3 4) (p i j n))))",'textBox9');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox10'].value= "((p 1 1 2) and ((p 1 3 2) and (p 3 4 4)))";
-		    		updateLaTeX("((p 1 1 2) and ((p 1 3 2) and (p 3 4 4)))",'textBox10');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox4'].value= "(bigand n (1 .. 4) (bigand j (1 .. 4) (bigor i (1 .. 4) (p i j n))))";
+		    		updateLaTeX("(bigand n (1 .. 4) (bigand j (1 .. 4) (bigor i (1 .. 4) (p i j n))))",'textBox4');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox5'].value= "(bigand n (1 .. 4) (bigor i (1 2) (bigor j (1 2) (p i j n))))";
+		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (1 2) (bigor j (1 2) (p i j n))))",'textBox5');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox6'].value= "(bigand n (1 .. 4) (bigor i (1 2) (bigor j (3 4) (p i j n))))";
+		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (1 2) (bigor j (3 4) (p i j n))))",'textBox6');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox7'].value= "(bigand n (1 .. 4) (bigor i (3 4) (bigor j (1 2) (p i j n))))";
+		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (3 4) (bigor j (1 2) (p i j n))))",'textBox7');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox8'].value= "(bigand n (1 .. 4) (bigor i (3 4) (bigor j (3 4) (p i j n))))";
+		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (3 4) (bigor j (3 4) (p i j n))))",'textBox8');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox9'].value= "((p 1 1 2) and (p 3 4 4))";
+		    		updateLaTeX("((p 1 1 2) and (p 3 4 4))",'textBox9');
 		    		
 		    		if ( langue == "en")
 		    		{
@@ -225,6 +223,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox6'].value= "(bigand i (1 .. 8) (bigand j (1 .. 8) ((p i j) imply (bigand k (1 .. 8) ((not (p (i+k) (j-k))) and (not (p (i-k) (j+k))))))))";
 		    		updateLaTeX("(bigand i (1 .. 8) (bigand j (1 .. 8) ((p i j) imply (bigand k (1 .. 8) ((not (p (i+k) (j-k))) and (not (p (i-k) (j+k))))))))",'textBox6');    
 
+
 		    		if ( langue == "en")
 		    		{
 			    		afficheDescription("8 queens","The goal of the problem is to place eight ladies eight ladies of a chess game on an 8 × 8 chessboard without boxes that ladies can not threaten each other according to the rules of chess (the color of the parts is ignored). Therefore, two ladies should never share the same row, column, or diagonal.");
@@ -254,6 +253,7 @@
 		    			}else{
 		    				afficheDescription("Les 6 Boules","Le but du probl&egraveme est de pouvoir placer des boules de couleurs diff&eacuterente dans un ordre sp&eacutecifique.");
 		    		}		    		
+
 		    	break;
 	    	}
 	    }
