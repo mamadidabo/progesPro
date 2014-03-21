@@ -71,7 +71,7 @@
 	function newproblem()
 	{
 	  viderNbInput(3);
-	  afficheDescription("New problem", "");
+	  afficheDescription("Nouveau problème", "");
 	  
 	}
 	
