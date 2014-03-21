@@ -33,20 +33,18 @@
 		    		updateLaTeX("(bigand i (1 .. 4) (bigand j (1 .. 4) (bigand n (1 .. 4)  (bigand m (1 .. 4)  (m diff n) ((p i j n) imply (not (p i j m)))))))",'textBox2');
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox3'].value= "(bigand n (1 .. 4) (bigand i (1 .. 4) (bigor j (1 .. 4) (p i j n))))";
 		    		updateLaTeX("(bigand n (1 .. 4) (bigand i (1 .. 4) (bigor j (1 .. 4) (p i j n))))",'textBox3'); 
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox4'].value= "(bigand n (1 .. 4) (bigand i (1 .. 4) (bigor j (1 .. 4) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigand i (1 .. 4) (bigor j (1 .. 4) (p i j n))))",'textBox4');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox5'].value= "(bigand n (1 .. 4) (bigand j (1 .. 4) (bigor i (1 .. 4) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigand j (1 .. 4) (bigor i (1 .. 4) (p i j n))))",'textBox5');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox6'].value= "(bigand n (1 .. 4) (bigor i (1 2) (bigor j (1 2) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (1 2) (bigor j (1 2) (p i j n))))",'textBox6');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox7'].value= "(bigand n (1 .. 4) (bigor i (1 2) (bigor j (3 4) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (1 2) (bigor j (3 4) (p i j n))))",'textBox7');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox8'].value= "(bigand n (1 .. 4) (bigor i (3 4) (bigor j (1 2) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (3 4) (bigor j (1 2) (p i j n))))",'textBox8');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox9'].value= "(bigand n (1 .. 4) (bigor i (3 4) (bigor j (3 4) (p i j n))))";
-		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (3 4) (bigor j (3 4) (p i j n))))",'textBox9');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox10'].value= "((p 1 1 2) and ((p 1 3 2) and (p 3 4 4)))";
-		    		updateLaTeX("((p 1 1 2) and ((p 1 3 2) and (p 3 4 4)))",'textBox10');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox4'].value= "(bigand n (1 .. 4) (bigand j (1 .. 4) (bigor i (1 .. 4) (p i j n))))";
+		    		updateLaTeX("(bigand n (1 .. 4) (bigand j (1 .. 4) (bigor i (1 .. 4) (p i j n))))",'textBox4');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox5'].value= "(bigand n (1 .. 4) (bigor i (1 2) (bigor j (1 2) (p i j n))))";
+		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (1 2) (bigor j (1 2) (p i j n))))",'textBox5');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox6'].value= "(bigand n (1 .. 4) (bigor i (1 2) (bigor j (3 4) (p i j n))))";
+		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (1 2) (bigor j (3 4) (p i j n))))",'textBox6');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox7'].value= "(bigand n (1 .. 4) (bigor i (3 4) (bigor j (1 2) (p i j n))))";
+		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (3 4) (bigor j (1 2) (p i j n))))",'textBox7');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox8'].value= "(bigand n (1 .. 4) (bigor i (3 4) (bigor j (3 4) (p i j n))))";
+		    		updateLaTeX("(bigand n (1 .. 4) (bigor i (3 4) (bigor j (3 4) (p i j n))))",'textBox8');
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox9'].value= "((p 1 1 2) and (p 3 4 4))";
+		    		updateLaTeX("((p 1 1 2) and (p 3 4 4))",'textBox9');
 		    		
 		    		afficheDescription("Sudoku 4X4","Le but du jeu est de remplir 4 lignes X 4 colonnes cases contenant des chiffres allant de 1 &agrave 4 en veillant toujours &agrave ce qu'un m&ecircme chiffre ne figure qu'une seule fois par colonne et une seule fois par ligne. <br /> <br /> The goal is to fill an array of 4 lines x 4 columns with numbers from 1 to 4 by always ensuring that the same number appears only once in each column and only once per line.");
 		    		
