@@ -189,7 +189,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox6'].value= "(bigand i (1 .. 8) (bigand j (1 .. 8) ((p i j) imply (bigand k (1 .. 8) ((not (p (i+k) (j-k))) and (not (p (i-k) (j+k))))))))";
 		    		updateLaTeX("(bigand i (1 .. 8) (bigand j (1 .. 8) ((p i j) imply (bigand k (1 .. 8) ((not (p (i+k) (j-k))) and (not (p (i-k) (j+k))))))))",'textBox6');    
 		    	
-		    		afficheDescription("Les 8 Dames / 8 queens","Le but du probl&egraveme des huit dames est de placer huit dames d'un jeu d'&eacutechecs sur un &eacutechiquier de 8 × 8 cases sans que les dames ne puissent se menacer mutuellement, conform&eacutement aux r&egravegles du jeu d'&eacutechecs (la couleur des pi&egraveces est ignor&eacutee). Par cons&eacutequent, deux dames ne devraient jamais partager la m&ecircme rang&eacutee, colonne, ou diagonale. <br /> <br /> The goal of the problem is to place eight ladies eight ladies of a chess game on an 8 × 8 chessboard without boxes that ladies can not threaten each other according to the rules of chess (the color of the parts is ignored). Therefore, two ladies should never share the same row, column, or diagonal.");
+		    		afficheDescription("Les 8 Dames / 8 queens","Le but du probl&egraveme des huit dames est de placer huit dames d'un jeu d'&eacutechecs sur un &eacutechiquier de 8 X 8 cases sans que les dames ne puissent se menacer mutuellement, conform&eacutement aux r&egravegles du jeu d'&eacutechecs (la couleur des pi&egraveces est ignor&eacutee). Par cons&eacutequent, deux dames ne devraient jamais partager la m&ecircme rang&eacutee, colonne, ou diagonale. <br /> <br /> The goal of the problem is to place eight ladies eight ladies of a chess game on an 8 X 8 chessboard without boxes that ladies can not threaten each other according to the rules of chess (the color of the parts is ignored). Therefore, two ladies should never share the same row, column, or diagonal.");
 		    		
 		    	break;
 		    	case '6Boules':
@@ -207,7 +207,7 @@
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox6'].value= "(b 6 Bleu)";
 		    		updateLaTeX("(b 6 Bleu)",'textBox6');   
 		    		
-		    		afficheDescription("Les 6 Boules / 6 balls","");
+		    		afficheDescription("Les 6 Boules / 6 balls","Le but du probl&egraveme est de pouvoir placer des boules de couleurs diff&eacuterente dans un ordre sp&eacutecifique. <br /> <br /> The purpose of this problem is to place balls of different color in a specific order.");
 		    		
 		    	break;
 	    	}
