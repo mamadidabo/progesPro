@@ -90,11 +90,7 @@
 
 	</fmt:bundle>
 
-<script>
-//insererEx(id)
-bobby();
 
-</script>
 
 </body>
 

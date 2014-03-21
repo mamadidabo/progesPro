@@ -80,13 +80,14 @@
 <script >
 
 
-function insererExH(id)
+
+function insererExH(id, langue)
 {
 	var page = "<c:out value="${pageA}" />";
-	
+	var langue = "<c:out value="${language}" />"; 
 	if ( page == "ex" || page == 'home' )
 	{
-		insererEx(id);	
+		insererEx(id, langue);	
 	}
 	else
 		{
