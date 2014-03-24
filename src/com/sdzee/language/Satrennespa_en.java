@@ -56,6 +56,11 @@ public class Satrennespa_en extends ListResourceBundle{
 		{"infos.back","Return to Homepage!"},
 		{"index.menu.inscription","Sign in"},
 		{"index.menu.connect","Log in"},
-		{"index.menu.titre2.mdp","Password"}
+		{"index.menu.titre2.mdp","Password"},
+		{"index.menu.titre1.soustitre1", "Nouveau"},
+		{"index.menu.titre1.soustitre2", "Enregistrer"},
+		{"index.menu.titre1.soustitre3", "Enregistrer sous"},
+		{"index.menu.titre1.soustitre4", "Supprimer"},
+		{"index.menu.titre1.soustitre5", "Mes Exemples"}
 	};
 }

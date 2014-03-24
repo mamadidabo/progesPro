@@ -25,7 +25,15 @@
 			les exemples misent en oeuvre "examples"
 				et l'aide "help"
 		-->
-										<li><a href="index.jsp?pageA=home"><fmt:message key="index.menu.titre1"/></a></li>
+										<li class='dropdown'><a class='dropdown-toggle'
+											data-toggle='dropdown'><fmt:message key="index.menu.titre1"/><b class='caret'></b></a>
+										<ul class='dropdown-menu'>
+												<li><a href="index.jsp?pageA=home"><fmt:message key="index.menu.titre1.soustitre1"/></a></li>
+												<li><a href="index.jsp?pageA=save"><fmt:message key="index.menu.titre1.soustitre2"/></a></li>
+												<li><a href="index.jsp?pageA=saveas"><fmt:message key="index.menu.titre1.soustitre3"/></a></li>
+												<li><a href="index.jsp?pageA=deleate"><fmt:message key="index.menu.titre1.soustitre4"/></a></li>
+												<li><a href="index.jsp?pageA=myexamples"><fmt:message key="index.menu.titre1.soustitre5"/></a></li>												
+										</ul></li>
 										<li class="divider-vertical"></li>
 										<li class='dropdown'><a class='dropdown-toggle'
 											data-toggle='dropdown'><fmt:message key="index.menu.titre2"/><b class='caret'></b></a>
