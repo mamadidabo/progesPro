@@ -242,12 +242,12 @@
     function afficheErreur(monMessage){
             $("#ErrorOrDescriptionDiv").attr('class','alert alert-danger');
             $("#ErrorOrDescriptionDiv").append(monMessage);
-            $("#ErrorOrDescriptionDiv").fadeIn(1000);
+            $("#ErrorOrDescriptionDiv").fadeIn(300);
     }      
      
     function fermeture(){
             $("#ErrorOrDescriptionDiv").empty();
-            $("#ErrorOrDescriptionDiv").fadeOut(1000);
+            $("#ErrorOrDescriptionDiv").fadeOut(100);
     }      
      
      
