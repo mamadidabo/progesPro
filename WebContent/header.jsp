@@ -57,20 +57,18 @@ function affichage(nom)
 			les exemples misent en oeuvre "examples"
 				et l'aide "help"
 		-->
-										 <li class='dropdown'><a class='dropdown-toggle'
+						
+
+										<li class='dropdown'><a class='dropdown-toggle'
 											data-toggle='dropdown'><fmt:message key="index.menu.titre1"/><b class='caret'></b></a>
 										<ul class='dropdown-menu'>
-										
-											
-	
-										
-										<li> <a class='dropdown' onclick="affichage('affiche')" ><fmt:message key="index.menu.open"/></a><b class='caret'></b></li>
-										<li> <a class='dropdown' href="index.jsp?pageA=save" > <fmt:message key="index.menu.Save"/></a><b class='caret'></b></li>
-										<li><a href="">Save As</a></li>
-										<li><a href="">Update</a></li>
-										<li><a class='dropdown' onclick="affichage('supprimer')"> <fmt:message key="index.menu.Delete"/><b class='caret'></b></a></li>
-										</ul>
-										</li>
+												<li><a onclick="affichage('affiche')"><fmt:message key="index.menu.titre1.soustitre1"/></a></li>
+												<li><a href="index.jsp?pageA=save"><fmt:message key="index.menu.titre1.soustitre2"/></a></li>
+												<li><a href="index.jsp?pageA=saveas"><fmt:message key="index.menu.titre1.soustitre3"/></a></li>
+												<li><a href="index.jsp?pageA=deleate"><fmt:message key="index.menu.titre1.soustitre4"/></a></li>
+												<li><a onclick="affichage('supprimer')"><fmt:message key="index.menu.titre1.soustitre5"/></a></li>												
+										</ul></li>
+
 										<li class="divider-vertical"></li>
 										<li class='dropdown'><a class='dropdown-toggle'
 											data-toggle='dropdown'><fmt:message key="index.menu.titre2"/><b class='caret'></b></a>

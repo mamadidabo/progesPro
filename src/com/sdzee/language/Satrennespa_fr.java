@@ -8,7 +8,7 @@ public class Satrennespa_fr extends ListResourceBundle{
 	}
 
 	static final Object[][] contents = {
-		{"index.menu.titre1","Nouveau problème"},
+		{"index.menu.titre1","Fichiers"},
 		{"index.menu.titre2","Exemples"},
 		{"index.menu.titre2.soustitre1", "Carr&eacute Latin 3x3"},
 		{"index.menu.titre2.soustitre2", "Sudoku 2x2"},
@@ -53,8 +53,13 @@ public class Satrennespa_fr extends ListResourceBundle{
 		{"infos.history4","et"},
 		{"infos.history5"," sous la supervision de Sophie Pinchinat et François Schwarzentruber."},
 		{"infos.back","Retour &agrave; l'accueil!"},
-		{"index.menu.inscription","inscription"},
-		{"index.menu.connect","connection"},
-		{"index.menu.titre2.mdp","Mdp"}	
+		{"index.menu.inscription","Inscription"},
+		{"index.menu.connect","Connexion"},
+		{"index.menu.titre2.mdp","Mot de passe"},
+		{"index.menu.titre1.soustitre1", "Nouveau"},
+		{"index.menu.titre1.soustitre2", "Enregistrer"},
+		{"index.menu.titre1.soustitre3", "Enregistrer sous"},
+		{"index.menu.titre1.soustitre4", "Supprimer"},
+		{"index.menu.titre1.soustitre5", "Mes Exemples"}
 	};
 }

@@ -268,6 +268,7 @@
 	<div class='span8'>
 						<form class='form-horizontal well' id='formulaire_satisfiabilite' method="post" action=AjouterExp>
 						
+<<<<<<< HEAD
 							<div class='row-fluid'>
 								<div class='span7 offset2'>
 		 							<label class='btn-primary btn-large' id='resultButton'
@@ -372,6 +373,59 @@
 							<input type='hidden' id='compteurErreur' name='compteurErreur'
 								id='compteurErreur' value="1" />
 						</form>
+=======
+						
+		<form class='form-horizontal well' id='formulaire_satisfiabilite'>
+			<div class='row-fluid'>
+			
+		
+			<div id='ErrorOrDescriptionDiv' style='display: none;width: auto'></div>
+	
+			
+				<div class='span7 offset2'>
+					<label class='btn-primary btn-large' id='resultButton'
+						onclick='javascript:afficheResult();'><i
+						class="icon-white icon-ok"></i> <fmt:message key="index.boutonok" /></label>
+				</div>
+			</div>
+			<div class='span8'>
+				<div class='control-group' id='champsText'>
+
+					<%
+						//creation des 3 inputs et 3 divPourLaTex appeles textBox1,divAjaxtextBox1 | textBox2,divAjaxtextBox2 | ...
+						for (int i = 1; i <= 3; i++) {
+					%>
+					<div id='ligne<%=i%>'>
+						<div class='span8'>
+							<input type='text' id='textBox<%=i%>' name='textBox<%=i%>'
+								value='' onchange='updateLaTeX(this.value,this.id);'
+								onclick='fermeture();setFocusedInput(this.id);updateLaTeX(this.value,this.id);'
+								onkeyup='updateLaTeX(this.value,this.id);' onkeydown='fermeture()' /> <a
+								class='btn btn-danger' id='boutonSuppr<%=i%>'
+								href='javascript:supprTextBox("ligne<%=i%>")'><i
+								class="icon-white icon-remove"></i></a>
+						</div>
+						<div id="divLaTeXtextBox<%=i%>" class='span8'>
+							<!-- -> ici sera inséré le code laTeX en JS <- -->
+						</div>
+					</div>
+					<%
+						}
+					%>
+				</div>
+			</div>
+			<div class='row-fluid'>
+				<div class='span12'>
+					<div class='control-group' id='boutons'>
+						<div class='span4 offset1' id='boutonAjout'>
+							<a href="javascript:ajoutInput();"
+								class="btn btn-success btn-large"><i
+								class="icon-white icon-plus-sign"></i>
+							<fmt:message key="index.boutonNouvelleFormule" /></a>
+						</div>
+						<img src="bootstrap/img/satrennespa.png" />
+						<!-- <div class='span4 offset2' id='boutonVider'><label class='btn btn-danger btn-large' onclick='viderNbInput(getNbInput());'><i class="icon-white icon-remove"></i> Delete all the formulas</label></div> -->
+>>>>>>> branch 'master' of https://github.com/mamadidabo/projetPro.git
 					</div>
 				</div>
 			</div>
