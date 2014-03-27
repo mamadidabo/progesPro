@@ -286,15 +286,12 @@
 						<div class='span8'>
 							<input type='text' id='textBox<%=i%>' name='textBox<%=i%>'
 								value='' onchange='updateLaTeX(this.value,this.id);'
-								onclick='setFocusedInput(this.id);updateLaTeX(this.value,this.id);'
-								onkeyup='updateLaTeX(this.value,this.id);' /> <a
+								onclick='fermeture();setFocusedInput(this.id);updateLaTeX(this.value,this.id);'
+								onkeyup='updateLaTeX(this.value,this.id);' onkeydown='fermeture()' /> <a
 								class='btn btn-danger' id='boutonSuppr<%=i%>'
 								href='javascript:supprTextBox("ligne<%=i%>")'><i
 								class="icon-white icon-remove"></i></a>
 						</div>
-						<%
-							
-						%>
 						<div id="divLaTeXtextBox<%=i%>" class='span8'>
 							<!-- -> ici sera inséré le code laTeX en JS <- -->
 						</div>
