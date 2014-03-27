@@ -33,6 +33,35 @@
     <servlet-name>GestionTestJDBC</servlet-name>
     <url-pattern>/testjdbc</url-pattern>
   </servlet-mapping>
+  <servlet>
+		<servlet-name>AjouterExp</servlet-name>
+		<servlet-class>com.sdzee.servlets.AjouterExp</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AjouterExp</servlet-name>
+		<url-pattern>/AjouterExp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>VisualiserExp</servlet-name>
+		<servlet-class>com.sdzee.servlets.VisualiserExp</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>VisualiserExp</servlet-name>
+		<url-pattern>/VisualiserExp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SupprimerEx</servlet-name>
+		<servlet-class>com.sdzee.servlets.SupprimerEx</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SupprimerEx</servlet-name>
+		<url-pattern>/SupprimerEx</url-pattern>
+	</servlet-mapping>
+	
   <listener>
     <listener-class>com.sdzee.config.InitialisationDaoFactory</listener-class>
   </listener>

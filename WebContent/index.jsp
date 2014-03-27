@@ -78,10 +78,19 @@
 				<c:when test="${pageA == 'inscription'}">
 					<%@include file="inscription.jsp"%>
 				</c:when>
+				
+				<c:when test="${pageA == 'save'}">
+				<%@include file="ajoutsupprime.jsp"%>
+				</c:when>
+				
+				
+				
 			</c:choose>
 
 
 
+<%! String[] lavue =AjouterExp.listIds();
+%>
 
 
 
@@ -91,7 +100,7 @@
 	</fmt:bundle>
 
 
-
+<%! int m=0;  %>
 </body>
 
 

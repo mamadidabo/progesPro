@@ -321,3 +321,8 @@
 				afficheErreur("Vous devez remplir au moins le 1er champ texte !");
 			}
 		}
+	    
+	    function affichage_popup()
+	    {
+	    window.open ('ouvrir.jsp', config='height=30, width=100, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no');
+	    }
