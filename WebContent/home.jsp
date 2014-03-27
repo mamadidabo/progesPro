@@ -267,113 +267,7 @@
 	<!--la zone centrale principale-->
 	<div class='span8'>
 						<form class='form-horizontal well' id='formulaire_satisfiabilite' method="post" action=AjouterExp>
-						
-<<<<<<< HEAD
-							<div class='row-fluid'>
-								<div class='span7 offset2'>
-		 							<label class='btn-primary btn-large' id='resultButton'
-										onclick='javascript:afficheResult();'><i
-										class="icon-white icon-ok"></i> Test whether the set of
-										formulas is satisfiable</label>
-								</div>
-							</div>
-							
-							<div class='span8'>
-								<div class='control-group' id='champsText'>
-								<% 
-								int m=0;
-										//creation des 3 inputs et 3 divPourLaTex  appeles textBox1,divAjaxtextBox1 | textBox2,divAjaxtextBox2 | ... 
-									if(request.getParameter("exemple")==null){
-											while( m < 3) {	
-									%>
-										
-										<div id='ligne<%=m%>'>
-										<div class='span8'>
-											<input type='text' id='textBox<%=m%>' name='textBox<%=m%>'
-			                                   value='<%= "" %>'		                                    
-												 onchange='updateLaTeX(this.value,this.id);'
-												onclick='setFocusedInput(this.id);updateLaTeX(this.value,this.id);'
-												onkeyup='updateLaTeX(this.value,this.id);' /> <a
-												class='btn btn-danger' id='boutonSuppr<%=m%>'
-												href='javascript:supprTextBox("ligne<%=m%>")'><i
-												class="icon-white icon-remove"></i></a>
-												
-										</div>
-										<div id="divLaTeXtextBox<%=m%>" class='span8'>
-											<!-- -> ici sera inséré le code laTeX en JS <- -->
-										</div>
-									</div>
-									<%  
-									m++;
-									} ;}
-											%>
-									<% if(request.getParameter("exemple")!=null) {					while( m <= liste1.length-1) {
-								
-										 %>
-								
-								<div id='ligne<%=m%>'>
-								<div class='span8'>
-									<input type='text' id='textBox<%=m%>' name='textBox<%=m%>'
-	                                   value='<%= liste1[m] %>'	
-	                                                                    
-										 onchange='updateLaTeX(this.value,this.id);'
-										onclick='setFocusedInput(this.id);updateLaTeX(this.value,this.id);'
-										onkeyup='updateLaTeX(this.value,this.id);' /> <a
-										class='btn btn-danger' id='boutonSuppr<%=m%>'
-										href='javascript:supprTextBox("ligne<%=m%>")'><i
-										class="icon-white icon-remove"></i></a>
-										
-								</div>
-								<div id="divLaTeXtextBox<%=m%>" class='span8'>
-									<!-- -> ici sera inséré le code laTeX en JS <- -->
-								</div>
-							</div>
-							<%m++;}
-									}
-									  	
-							%>
-							
-							<%
-								
-							 //boolean b=true;
-							  // if(AjouterExp.mettreAjourFich==true){%>
-						
-							 <script type="text/javascript" >
-							 
-							<% {
-								 
-								 // b=false;
-								 
-								 }%>;
-								
-								</script>
-							
-								<% 
-								//AjouterExp.mettreAjourFich =b;
-							
-								;
-								//} %>
-						
-								 </form>
-								</div>
-							</div>
-							<div class='row-fluid'>
-								<div class='span12'>
-									<div class='control-group' id='boutons'>
-										<div class='span4 offset1' id='boutonAjout'>
-											<a href="javascript:ajoutInput();"
-												class="btn btn-success btn-large"><i
-												class="icon-white icon-plus-sign"></i><fmt:message key="index.boutonNouvelleFormule"/></a>
-										</div>
-										<img src="bootstrap/img/satrennespa.png" />
-										<!-- <div class='span4 offset2' id='boutonVider'><label class='btn btn-danger btn-large' onclick='viderNbInput(getNbInput());'><i class="icon-white icon-remove"></i> Delete all the formulas</label></div> -->
-									</div>
-								</div>
-							</div>
-							<input type='hidden' id='compteurErreur' name='compteurErreur'
-								id='compteurErreur' value="1" />
-						</form>
-=======
+
 						
 		<form class='form-horizontal well' id='formulaire_satisfiabilite'>
 			<div class='row-fluid'>
@@ -425,7 +319,6 @@
 						</div>
 						<img src="bootstrap/img/satrennespa.png" />
 						<!-- <div class='span4 offset2' id='boutonVider'><label class='btn btn-danger btn-large' onclick='viderNbInput(getNbInput());'><i class="icon-white icon-remove"></i> Delete all the formulas</label></div> -->
->>>>>>> branch 'master' of https://github.com/mamadidabo/projetPro.git
 					</div>
 				</div>
 			</div>
