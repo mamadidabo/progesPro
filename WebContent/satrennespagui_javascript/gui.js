@@ -2,7 +2,7 @@
 
      
     var nbInput = 0;
-    //variable globale stockant le nombre d'inputs prÃ©sents dans la page
+    //variable globale stockant le nombre d'inputs présents dans la page
     window.onload = function(){nbInput = compterNbInput();};
     //variable globale stockant le dernier input ayant eu le focus pour retenir dans quelle textBox ajouter le contenu du bouton lors d'un clic sur ce bonton
     var focusedInput = "textBox1";
@@ -32,7 +32,7 @@
      
      
      
-    //mÃ©thode servant Ã  insÃ©rer la valeur des boutons dans l'input ayant le focus
+    //méthode servant �  insérer la valeur des boutons dans l'input ayant le focus
     function insertValue(chaineAj)
     {
             var myForm = document.getElementById("formulaire_satisfiabilite").elements[getFocusedInput()];
@@ -96,19 +96,19 @@
      
     function deleteAllInput()
     {
-    //      On supprime les inputs jusqu'Ã  ce qu'il n'en reste aucun
+    //      On supprime les inputs jusqu'�  ce qu'il n'en reste aucun
             while(getNbInput()!=1)
             {
                     supprTextBox("ligne"+getNbInput());
             }
     }
      
-    //Ajout d'un nombre prÃ©cis textBox dans la page index
+    //Ajout d'un nombre précis textBox dans la page index
     function setNbInput(nombreInput)
     {
     //      on supprime toutes les autres
             deleteAllInput();
-    //      puis on ajoute le nombre adÃ©quat d'inputs
+    //      puis on ajoute le nombre adéquat d'inputs
             for(var i=1;i<=nombreInput;i++)
             {
                     ajoutInput();
@@ -158,7 +158,7 @@
     //supprimer textBox
     function supprTextBox(maDiv)
     {
-    //      on récupere le numéro de la Div
+    //      on r�cupere le num�ro de la Div
             var numDiv=parseInt(maDiv.substring(5));
      
             if(compterNbInput()!=1){
@@ -173,8 +173,6 @@
                     }
                     $('#'+maDiv).remove();
                     decrementNbInput();
-                    fermeture();
-                    
             }
             else{
                     afficheErreur("Vous devez garder au moins un champ texte !");
@@ -224,7 +222,7 @@
      
      
      
-    //fonction permettant d'encoder au format HTML les caracteres spÃ©ciaux contenus dans les inputs
+    //fonction permettant d'encoder au format HTML les caracteres spéciaux contenus dans les inputs
     function updateHTML(schemeExpression)
     {
             return encodeURI(schemeExpression)
@@ -244,17 +242,15 @@
     function afficheErreur(monMessage){
             $("#ErrorOrDescriptionDiv").attr('class','alert alert-danger');
             $("#ErrorOrDescriptionDiv").append(monMessage);
-            $("#ErrorOrDescriptionDiv").fadeIn();
+            $("#ErrorOrDescriptionDiv").fadeIn(300);
     }      
      
     function fermeture(){
             $("#ErrorOrDescriptionDiv").empty();
-            $("#ErrorOrDescriptionDiv").fadeOut();
+            $("#ErrorOrDescriptionDiv").fadeOut(100);
     }      
      
-    function test(){
-     alert("caca");
-}       
+     
     //gestion des descriptions d'exemples
     function afficheDescription(monExemple, maDescription){
             $("#ErrorOrDescriptionDiv").attr('class','alert alert-info');
