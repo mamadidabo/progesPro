@@ -173,6 +173,8 @@
                     }
                     $('#'+maDiv).remove();
                     decrementNbInput();
+                    fermeture();
+                    
             }
             else{
                     afficheErreur("Vous devez garder au moins un champ texte !");
@@ -242,15 +244,17 @@
     function afficheErreur(monMessage){
             $("#ErrorOrDescriptionDiv").attr('class','alert alert-danger');
             $("#ErrorOrDescriptionDiv").append(monMessage);
-            $("#ErrorOrDescriptionDiv").fadeIn(300);
+            $("#ErrorOrDescriptionDiv").fadeIn();
     }      
      
     function fermeture(){
             $("#ErrorOrDescriptionDiv").empty();
-            $("#ErrorOrDescriptionDiv").fadeOut(100);
+            $("#ErrorOrDescriptionDiv").fadeOut();
     }      
      
-     
+    function test(){
+     alert("caca");
+}       
     //gestion des descriptions d'exemples
     function afficheDescription(monExemple, maDescription){
             $("#ErrorOrDescriptionDiv").attr('class','alert alert-info');

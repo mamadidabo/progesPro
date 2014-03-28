@@ -292,8 +292,8 @@
 					<div id='ligne<%=i%>'>
 						<div class='span8'>
 							<input type='text' id='textBox<%=i%>' name='textBox<%=i%>'
-								value='' onchange='updateLaTeX(this.value,this.id);'
-								onclick='fermeture();setFocusedInput(this.id);updateLaTeX(this.value,this.id);'
+								value=''
+								onclick='fermeture();setFocusedInput(this.id);updateLaTeX(this.value,this.id)'
 								onkeyup='updateLaTeX(this.value,this.id);' onkeydown='fermeture()' /> <a
 								class='btn btn-danger' id='boutonSuppr<%=i%>'
 								href='javascript:supprTextBox("ligne<%=i%>")'><i

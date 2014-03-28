@@ -6,9 +6,9 @@
     //methode mere rafraishissant le code latex tout en le convertissant
     function updateLaTeX(schemeExpression,id)
     {
+    		compteurscheme();
             //si le contenu de l'input est correct
             refresh(schemeExpression , id ) ;
-            compteurscheme();
     }
      
      
