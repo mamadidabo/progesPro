@@ -1,4 +1,3 @@
-<script src='satrennespagui_javascript/gui.js'></script>
 
 			<%@page import="org.apache.catalina.ha.session.SessionMessageImpl"%>
 <%@page import="org.apache.jasper.tagplugins.jstl.core.Set"%>
@@ -25,7 +24,7 @@
 			les exemples misent en oeuvre "examples"
 				et l'aide "help"
 		-->
-										<li><a href="index.jsp?pageA=home"><fmt:message key="index.menu.titre1"/></a></li>
+										<li><a onclick="np();"><fmt:message key="index.menu.titre1"/></a></li>
 										<li class="divider-vertical"></li>
 										<li class='dropdown'><a class='dropdown-toggle'
 											data-toggle='dropdown'><fmt:message key="index.menu.titre2"/><b class='caret'></b></a>
@@ -43,10 +42,10 @@
 										<li class="divider-vertical"></li>
 
 										<!-- un click sur l'onglet "Help", charge la page 'infos'-->
-										<li><a id ='infos'  onclick='infos()' ><fmt:message key="index.menu.titre3"/><i class="icon-white icon-info-sign"></i></a></li>
+										<li><a id ='info'  onclick="infos();" ><fmt:message key="index.menu.titre3"/><i class="icon-white icon-info-sign"></i></a></li>
 												
 												
-										</li>
+										
 										<li class="divider-vertical"></li>
 
 											<li class='dropdown'><a class='dropdown-toggle'
@@ -77,39 +76,7 @@
 					</div>
 
 				
-<script >
 
-
-
-function insererExH(id, langue)
-{
-	var page = "<c:out value="${pageA}" />";
-	var langue = "<c:out value="${language}" />"; 
-	if ( page == "ex" || page == 'home' )
-	{
-		insererEx(id, langue);	
-	}
-	else
-		{
-		document.location.href="index.jsp?pageA=ex&id="+id;	
-		
-		}
-	
-}
-
-function infos()
-{
-
-var page = "<c:out value="${pageA}" />";
-	
-	if ( page != 'infos' )
-	{
-		document.location.href="index.jsp?pageA=infos";
-	}
-	
-	
-	}
-</script>
 
 </body>
 </html>

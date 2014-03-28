@@ -1,3 +1,5 @@
+<div id = 'home'>
+
 
 <div class='row'>
 	<!--bloc central-->
@@ -322,6 +324,8 @@
 				id='compteurErreur' value="1" />
 		</form>
 	</div>
+</div>
+
 </div>
 
 

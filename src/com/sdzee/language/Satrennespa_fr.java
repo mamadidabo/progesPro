@@ -54,7 +54,8 @@ public class Satrennespa_fr extends ListResourceBundle{
 		{"infos.history5"," sous la supervision de Sophie Pinchinat et François Schwarzentruber."},
 		{"infos.back","Retour &agrave; l'accueil!"},
 		{"index.menu.inscription","inscription"},
-		{"index.menu.connect","connection"},
-		{"index.menu.titre2.mdp","Mdp"}	
+		{"index.menu.connect","connexion"},
+		{"index.menu.titre2.mdp","Mdp"}	,
+		{"infos.return","retour au probleme"}
 	};
 }

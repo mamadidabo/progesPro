@@ -8,6 +8,7 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <c:set var="language"
 	value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
 	scope="session" />
@@ -38,8 +39,7 @@
 
 	<fmt:bundle basename="com.sdzee.language.Satrennespa">
 		<div class='container'>
-			<%@include file="header.jsp"%>
-
+			
 
 
 			<c:choose>
@@ -52,33 +52,56 @@
 					<c:set var="pageA" value="${param.pageA}" scope="session" />
 				</c:otherwise>
 			</c:choose>
-
-
-
-			<c:set var="id" value="${param.id}" scope="session" />
 		
+			<c:set var="id" value="${param.id}" scope="session" />
 
+<%@include file="script.jsp" %>
+	<%@include file="header.jsp"%>
 			<c:choose>
-				<c:when test="${pageA == 'home'}">
+				<c:when test="${pageA == 'home' or pageA == 'infos' or pageA == 'ex'}">
 					<%@include file="home.jsp"%>
-					<script type="text/javascript">
-					newproblem();
-					</script>					
-				</c:when>
-				<c:when test="${pageA == 'ex'}">
-					<%@include file="home.jsp"%>
-					<script type="text/javascript">						
-						id = "<c:out value="${id}" />";				
-						
-					</script>				
-				</c:when>
-				<c:when test="${pageA == 'infos'}">
 					<%@include file="infos.jsp"%>
-				</c:when>
+					<c:choose>
+						<c:when test="${pageA=='home' || pageA=='ex'  }">
+							<script type="text/javascript">
+								afficherH();
+							</script>
+							
+							<c:choose>
+								<c:when test="${pageA=='home'}">
+										<script type="text/javascript">
+											newproblem();
+										</script>								
+								</c:when>
+								<c:otherwise>
+										<script type="text/javascript">
+											var id = "<c:out value="${id}" />";
+											var langue = "<c:out value="${langue}" />";
+											insererEx(id, langue);
+										</script>
+								</c:otherwise>
+							
+							</c:choose>					
+						</c:when>
+						<c:otherwise>
+							<script type="text/javascript">
+							afficherI();
+							
+							</script>
+
+						</c:otherwise>
+
+					</c:choose>
+				</c:when>	
+
+
+
 				<c:when test="${pageA == 'inscription'}">
 					<%@include file="inscription.jsp"%>
 				</c:when>
-			</c:choose>
+				
+				
+		</c:choose>
 
 
 
@@ -89,8 +112,6 @@
 
 
 	</fmt:bundle>
-
-
 
 </body>
 

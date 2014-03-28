@@ -1,24 +1,5 @@
-<!-- argggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg -->
+									<!-- argggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg -->
 <%@page import="org.apache.jasper.tagplugins.jstl.core.Set"%>
-<script>
-function connect()
-{
-	if (document.getElementById("connect").style.display=="none")
-		
-		{
-		document.getElementById("connect").style.display= "block";		
-		
-		
-		}
-	
-	else
-		{
-		document.getElementById("connect").style.display="none";
-		}
-	
-	}
-
-</script>
 
 <form method="post" action="connexion">
 
@@ -36,7 +17,7 @@ function connect()
 		
 							<li>							
 				
-							<li> <a onclick="connect();"><u><fmt:message key="index.menu.connect"/></u></a>		
+							<li> <a onclick="affichage('connect');"><u><fmt:message key="index.menu.connect"/></u></a>		
 							
 							<li class="divider-vertical"></li>
 							<li> <a href="index.jsp?pageA=inscription"><u><fmt:message key="index.menu.inscription"/></u></a>							
