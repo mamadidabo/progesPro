@@ -147,7 +147,7 @@
     //      initialisation de la div ainsi que de son contenu
             var string = "";       
             string += "<div class='span8' id='ligne"+getNbInput()+"'"+">";
-            string +=       "<input type='text' id='textBox"+getNbInput()+"'"+" name='textBox"+getNbInput()+"' " + " value='' onchange='updateLaTeX(this.value,this.id);' onclick='updateLaTeX(this.value,this.id);setFocusedInput(this.id);' onkeyup='updateLaTeX(this.value,this.id)' />";
+            string +=       "<input type='text' id='textBox"+getNbInput()+"'"+" name='textBox"+getNbInput()+"' " + " value='' onchange='updateLaTeX(this.value,this.id);' onclick='fermeture();setFocusedInput(this.id);updateLaTeX(this.value,this.id)' onkeyup='updateLaTeX(this.value,this.id);' onkeydown='fermeture()'/>";
             string += " <a class='btn btn-danger' id='boutonSuppr"+getNbInput()+"'"+"href='javascript:supprTextBox(\"ligne"+getNbInput()+"\")'><i class='icon-white icon-remove'></i></a>";
             string += "<div id='divLaTeXtextBox"+getNbInput()+"'"+"></div>";
             string += "</div>";
