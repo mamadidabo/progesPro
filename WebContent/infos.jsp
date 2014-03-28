@@ -1,3 +1,12 @@
+<div id = 'infos'>
+<div class='span4' style='width: auto; float: left;padding:0px;margin:0px;'>
+		<nav class='navbar'>
+			<div class='navbar-inner'>
+				<ul class='nav'>
+				<li><a onclick='afficherH();'><fmt:message key="infos.return" /></a>
+				</ul></div></nav></div>
+				
+				
 		<div class='container'>
 			<div id='page-content' class='page-content'>
 				<div class='page-content' id='page-content'>
@@ -89,4 +98,4 @@
 			</div>
 		</div>
 
-
+</div>

@@ -60,6 +60,7 @@ public class Satrennespa_fr extends ListResourceBundle{
 		{"index.menu.titre1.soustitre2", "Enregistrer"},
 		{"index.menu.titre1.soustitre3", "Enregistrer sous"},
 		{"index.menu.titre1.soustitre4", "Supprimer"},
-		{"index.menu.titre1.soustitre5", "Mes Exemples"}
+		{"index.menu.titre1.soustitre5", "Mes Exemples"},
+		{"infos.return","retour au probleme"}
 	};
 }
