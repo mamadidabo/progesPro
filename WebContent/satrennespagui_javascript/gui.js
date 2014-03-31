@@ -181,7 +181,27 @@
                     afficheErreur("Vous devez garder au moins un champ texte !");
             }
     }
+ 
+    //supprimer textBox
+    function supprTextBox(maDiv)
+    {
+    //      on récupere le numéro de la Div
+            var numDiv=parseInt(maDiv.substring(5));
      
+            if(compterNbInput()!=1){
+                    for(var i=numDiv+1;i<=getNbInput();i++)
+                    {
+                            $('#ligne'+i).attr('id','ligne'+(i-1));
+                            $('#textBox'+i).attr('name','textBox'+(i-1));
+                            $('#textBox'+i).attr('id','textBox'+(i-1));
+                            $('#boutonSuppr'+i).attr('href','javascript:supprTextBox("ligne'+(i-1)+'"'+')');
+                            $('#boutonSuppr'+i).attr('id','boutonSuppr'+(i-1));
+                            $('#divLaTeXtextBox'+i).attr('id','divLaTeXtextBox'+(i-1));
+                    }
+                    $('#'+maDiv).remove();
+                    decrementNbInput();
+            }
+    }
     //Vider un nombre defini de textBox de la page index
     function viderNbInput(nbInput) {
             for(var i=1;i<=nbInput;++i)

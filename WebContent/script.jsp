@@ -29,6 +29,14 @@ insererEx(id, langue);
 
 }
 
+function updateLaTexH(value,id)
+{
+var langue = "<c:out value="${language}" />";
+updateLaTeX(id, value, langue);
+}
+
+
+
 function np()
 {
 	fermer();

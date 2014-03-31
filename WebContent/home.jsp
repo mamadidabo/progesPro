@@ -1,6 +1,4 @@
-
-	
-<div id ="home">									 
+<div id ="home">				 
 <div class='row'> 
 	<!--bloc central--> 
 
@@ -287,8 +285,8 @@
 						<div class='span8'>
 							<input type='text' id='textBox<%=i%>' name='textBox<%=i%>'
 								value=''
-								onclick='fermeture();setFocusedInput(this.id);updateLaTeX(this.value,this.id)'
-								onkeyup='updateLaTeX(this.value,this.id);' onkeydown='fermeture()' /> <a
+								onclick='fermeture();setFocusedInput(this.id);updateLaTexH(this.value,this.id)'
+								onkeyup='updateLaTexH(this.value,this.id);' onkeydown='fermeture()' /> <a
 								class='btn btn-danger' id='boutonSuppr<%=i%>'
 								href='javascript:supprTextBox("ligne<%=i%>")'><i
 								class="icon-white icon-remove"></i></a>
@@ -319,9 +317,6 @@
 		</div>
 </div>		
 </div>
-
-	
-
 
 
 
