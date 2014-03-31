@@ -24,7 +24,7 @@ function insererExH(id)
 {
 
 fermer();	
-var langue = "<c:out value="${langue}" />";
+var langue = "<c:out value="${language}" />";
 insererEx(id, langue);
 
 }
