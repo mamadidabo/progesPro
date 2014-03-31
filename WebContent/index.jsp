@@ -45,81 +45,18 @@
 %>
 	<fmt:bundle basename="com.sdzee.language.Satrennespa">
 		<div class='container'>
-			
+	
 
-
-			<c:choose>
-				<c:when test="${empty param.pageA}">
-					<c:if test="${empty pageA}">
-						<c:set var="pageA" value="home" scope="session" />
-					</c:if>
-				</c:when>
-				<c:otherwise>
-					<c:set var="pageA" value="${param.pageA}" scope="session" />
-				</c:otherwise>
-			</c:choose>
-		
 			<c:set var="id" value="${param.id}" scope="session" />
 
 <%@include file="script.jsp" %>
-	<%@include file="header.jsp"%>
-			<c:choose>
-				<c:when test="${pageA == 'home' or pageA == 'infos' or pageA == 'ex'}">
-					<%@include file="home.jsp"%>
-					<%@include file="infos.jsp"%>
-					<c:choose>
-						<c:when test="${pageA=='home' || pageA=='ex'  }">
-							<script type="text/javascript">
-								afficherH();
-							</script>
-							
-							<c:choose>
-								<c:when test="${pageA=='home'}">
-										<script type="text/javascript">
-											newproblem();
-										</script>								
-								</c:when>
-								<c:otherwise>
-										<script type="text/javascript">
-											var id = "<c:out value="${id}" />";
-											var langue = "<c:out value="${langue}" />";
-											insererEx(id, langue);
-										</script>
-								</c:otherwise>
-							
-							</c:choose>					
-						</c:when>
-						<c:otherwise>
-							<script type="text/javascript">
-							afficherI();
-							
-							</script>
-
-						</c:otherwise>
-
-					</c:choose>
-				</c:when>	
-
-
-
-				<c:when test="${pageA == 'inscription'}">
-					<%@include file="inscription.jsp"%>
-				</c:when>
-				
+<%@include file="header.jsp"%>		
+<%@include file="home.jsp"%>				
 			
-				
-				
-		</c:choose>
 
-	<%! String[] lavue =AjouterExp.listIds();%>
-
-
-
-
-		</div>
-
-
-	</fmt:bundle>
+<%! String[] lavue =AjouterExp.listIds();%>
+</div>
+</fmt:bundle>
 <%! int m=0;  %>
 </body>
 

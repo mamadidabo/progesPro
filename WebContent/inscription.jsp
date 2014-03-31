@@ -1,3 +1,34 @@
+<%@ page pageEncoding='UTF-8'%>
+<!-- We set the page encoding  -->
+
+<!-- Java importations -->
+<%@  page import="java.util.*"%>
+<%@  page import="org.apache.*"%>
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+<c:set var="language"
+	value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
+	scope="session" />
+<fmt:setLocale value="${language}" />
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<!-- Bootstrap importations -->
+<link rel='stylesheet' href='bootstrap/css/bootstrap.min.css'
+	type='text/css' />
+<link rel='stylesheet' href='bootstrap/css/bootstrap-responsive.css'
+	type='text/css' />
+<script src='bootstrap/js/jquery.js'></script>
+<script src='bootstrap/js/bootstrap.js'></script>
+	
+<fmt:bundle basename="com.sdzee.language.Satrennespa">
+				
+
+
 		<form method="post" action="inscription">
 			<fieldset>
 				<legend>
@@ -42,4 +73,8 @@
 			</fieldset>
 		</form>
 
-<
+</fmt:bundle>
+</body>
+
+
+</html>

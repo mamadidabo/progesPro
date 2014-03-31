@@ -71,7 +71,10 @@
     //function to initialize a new problem
     function newproblem()
     {
-            viderNbInput(3);
+    		deleteAllIput();
+            viderNbInput(1);
+            ajoutInput();
+            ajoutInput();
             afficheDescription("New problem", "");
      
     }

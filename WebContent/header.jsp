@@ -4,15 +4,7 @@
 <%@ page import="com.sdzee.servlets.AjouterExp"%>
 
 <script src='satrennespagui_javascript/gui.js'></script>
-<script type="text/javascript">
-	function affichage_popup(nom_de_la_page, nom_interne_de_la_fenetre) {
-		window
-				.open(
-						nom_de_la_page,
-						nom_interne_de_la_fenetre,
-						config = 'height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no')
-	}
-</script>
+
 
 
 <%@page import="org.apache.catalina.ha.session.SessionMessageImpl"%>
@@ -46,7 +38,7 @@
 								data-toggle='dropdown'><fmt:message key="index.menu.titre1" /><b
 									class='caret'></b></a>
 								<ul class='dropdown-menu'>
-									<li><a onclick="np()"><fmt:message
+									<li><a onclick="np();"><fmt:message
 												key="index.menu.titre1.soustitre1" /></a></li>
 									<li><a onclick="changer('ajout')"><fmt:message
 												key="index.menu.titre1.soustitre2" /></a></li>
@@ -88,7 +80,7 @@
 							<li class="divider-vertical"></li>
 
 							<!-- un click sur l'onglet "Help", charge la page 'infos'-->
-							<li><a id='info' onclick='infos()'><fmt:message
+							<li><a id='info' onclick ="affichage_popup('infos.jsp','Aide');"><fmt:message
 										key="index.menu.titre3" /><i
 									class="icon-white icon-info-sign"></i></a></li>
 

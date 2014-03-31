@@ -21,7 +21,7 @@
 							<li> <a onclick="changer('connect');"><u><fmt:message key="index.menu.connect"/></u></a>		
 							
 							<li class="divider-vertical"></li>
-							<li> <a href="index.jsp?pageA=inscription"><u><fmt:message key="index.menu.inscription"/></u></a>							
+							<li> <a onclick ="affichage_popup('inscription.jsp','Aide');"><u><fmt:message key="index.menu.inscription"/></u></a>							
 							</li>
 
 
