@@ -1,19 +1,3 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<c:set var="language"
-	value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
-	scope="session" />
-<fmt:setLocale value="${language}" />
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-<title>Inscription</title>
-<link type="text/css" rel="stylesheet" href="form.css" />
-</head>
-<body>
-	<fmt:bundle basename="com.sdzee.language.Satrennespa">
 		<form method="post" action="inscription">
 			<fieldset>
 				<legend>
@@ -57,7 +41,5 @@
 				<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
 			</fieldset>
 		</form>
-	</fmt:bundle>
 
-</body>
-</html>
+<
