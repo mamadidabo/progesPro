@@ -17,8 +17,8 @@
 		    		updateLaTeX("(bigand i (1 2 3) (bigand n (1 2 3)  (bigor j (1 2 3) (p i j n))))",'textBox3');
 		    		document.getElementById("formulaire_satisfiabilite").elements['textBox4'].value= "(bigand j (1 2 3) (bigand n (1 2 3)  (bigor i (1 2 3) (p i j n))))";
 		    		updateLaTeX("(bigand j (1 2 3) (bigand n (1 2 3)  (bigor i (1 2 3) (p i j n))))",'textBox4');
-		    		document.getElementById("formulaire_satisfiabilite").elements['textBox5'].value= "((((((((p 1 1 2) and (p 1 2 1)) and ((p 1 3 3) and (p 2 1 1))) and (p 2 2 3)) and (p 2 3 1)) and (p 3 1 1)) and (p 3 2 2)) and (p 3 3 3))";
-		    		updateLaTeX("((((((((p 1 1 2) and (p 1 2 1)) and ((p 1 3 3) and (p 2 1 1))) and (p 2 2 3)) and (p 2 3 1)) and (p 3 1 1)) and (p 3 2 2)) and (p 3 3 3))",'textBox5');    		
+		    		document.getElementById("formulaire_satisfiabilite").elements['textBox5'].value= "((p 1 1 1) and (p 3 3 3))";
+		    		updateLaTeX("((p 1 1 1) and (p 3 3 3))",'textBox5');    		
 		    		
 		    		if ( langue == "en")
 		    		{
