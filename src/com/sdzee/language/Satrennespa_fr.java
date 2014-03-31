@@ -8,7 +8,7 @@ public class Satrennespa_fr extends ListResourceBundle{
 	}
 
 	static final Object[][] contents = {
-		{"index.menu.titre1","Fichiers"},
+		{"index.menu.titre1","Fichier"},
 		{"index.menu.titre2","Exemples"},
 		{"index.menu.titre2.soustitre1", "Carr&eacute Latin 3x3"},
 		{"index.menu.titre2.soustitre2", "Sudoku 2x2"},
