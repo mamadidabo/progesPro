@@ -21,7 +21,7 @@ public class Satrennespa_fr extends ListResourceBundle{
 		{"index.menu.titre2.soustitre9", "Les 8 Dames"},
 		{"index.menu.titre2.soustitre10", "Les 6 Boules"},
 		{"index.menu.titre3","Aide"},
-		{"index.menu.titre4","Langage"},
+		{"index.menu.titre4","Langue"},
 		{"index.menu2.titre1","Fonctions de base"},
 		{"index.menu2.titre2","Pays"},
 		{"index.menu2.titre3","Couleurs"},
@@ -60,7 +60,6 @@ public class Satrennespa_fr extends ListResourceBundle{
 		{"index.menu.titre1.soustitre2", "Enregistrer"},
 		{"index.menu.titre1.soustitre3", "Enregistrer sous"},
 		{"index.menu.titre1.soustitre4", "Supprimer"},
-		{"index.menu.titre1.soustitre5", "Mes Exemples"},
-		{"infos.return","retour au probleme"}
+		{"index.menu.titre1.soustitre5", "Mes Exemples"}
 	};
 }

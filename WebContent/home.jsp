@@ -1,6 +1,12 @@
-
+<%@page import="com.sdzee.servlets.VisualiserExp"%>
+						<% String result=request.getParameter("exemple");
+						String filePath = "C:/Users/mohamed/Desktop/eclipse/"+result ;
+						String[] liste1 =VisualiserExp.lesLinesFichier(filePath).toArray(new String[VisualiserExp.lesLinesFichier(filePath).size()]);
+						String maValeur1="";
+						String[]  maValeur=new String [liste1.length];
+%>
 	
-<div id ="home">									 
+									 
 <div class='row'> 
 	<!--bloc central--> 
 
@@ -317,8 +323,8 @@
 				</div>
 			</div>
 		</div>
-</div>		
-</div>
+		
+
 
 	
 

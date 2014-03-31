@@ -1,8 +1,26 @@
 <!-- argggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg -->
 <%@page import="org.apache.jasper.tagplugins.jstl.core.Set"%>
+<script>
+function connect()
+{
+	if (document.getElementById("connect").style.display=="none")
+		
+		{
+		document.getElementById("connect").style.display= "block";		
+		
+		
+		}
+	
+	else
+		{
+		document.getElementById("connect").style.display="none";
+		}
+	
+	}
 
+</script>
 
-
+<form method="post" action="connexion">
 
 	<div class='span4' style='width: auto; float: right;padding:0px;'>
 		<nav class='navbar'>
@@ -18,7 +36,7 @@
 		
 							<li>							
 				
-							<li> <a onclick="changer('connect');"><u><fmt:message key="index.menu.connect"/></u></a>		
+							<li> <a onclick="connect();"><u><fmt:message key="index.menu.connect"/></u></a>		
 							
 							<li class="divider-vertical"></li>
 							<li> <a href="index.jsp?pageA=inscription"><u><fmt:message key="index.menu.inscription"/></u></a>							
@@ -31,10 +49,21 @@
 
 
 						<c:otherwise>
-
+</form>
 
 
 <li><a>${sessionScope.sessionUtilisateur.email}</a></li>
+<li class="divider-vertical"></li>
+
+
+<li class='dropdown'><a class='dropdown-toggle'
+	data-toggle='dropdown'>my examples <b class='caret'></b></a>
+	<ul class='dropdown-menu'>
+		<li>a inserer</li>
+	</ul></li>
+
+<li class="divider-vertical"></li>
+<li><a>My account</a></li>
 
 <li class="divider-vertical"></li>
 
@@ -42,15 +71,13 @@
 		<form method="get" action="deconnexion">
 			<input type="submit" value="sign out" class="sansLabel"
 				style="bordeur: 0; background-color: transparent; color: white; border-style: none;" />
-	
-		</form>
-
 </a></li>
 </c:otherwise>
 
 </c:choose>
 
 
+</form>
 
 </ul>
 </div>
@@ -59,7 +86,6 @@
 
 
 <div id = "connect" style = 'display : none;float : right; '>
-<form method="post" action="connexion">
  <fieldset>
                 
                
@@ -90,7 +116,6 @@
                     <p class="succes">Vous êtes connecté(e) avec le pseudo : ${sessionScope.sessionUtilisateur.email}</p>
                 </c:if>
             </fieldset>
-            </form>
 </div>
 
 </div>
