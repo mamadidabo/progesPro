@@ -161,10 +161,12 @@
 			<form method="post" action="AjouterExp">
 			<fmt:message key="index.name" />: <input style="width: auto;" type="text"
 					id='soumettreEx' name="nomEx" value=""/>
-					<br/>					
+					<br/>	
+					<p align="center">				
 					<input type="submit" id='soumettreEx' name= <fmt:message key ="index.menu.titre1.soustitre2"/>
 					value="<fmt:message key="index.menu.titre1.soustitre2" />"/>
-			</form>
+					</p>
+				</form>
 			</p>
 			
 		</div>
