@@ -92,9 +92,9 @@
 								data-toggle='dropdown'><fmt:message key="index.menu.titre4" /><b
 									class='caret'></b></a>
 								<ul class='dropdown-menu'>
-									<li><a href="index.jsp?language=en"><img
+									<li><a onclick="langue('en');"><img
 											src="icons/flags/Angleterre.png" /></a></li>
-									<li><a href="index.jsp?language=fr"><img
+									<li><a onclick="langue('fr');"><img
 											src="icons/flags/France.png" /></a></li>
 								</ul></li>
 
@@ -107,7 +107,7 @@
 <div id="affiche" style='display: none; float: left;'>
 		<fieldset>
 			<FORM METHOD=post ACTION="VisualiserExp">
-				<p align="center">examples :</p>
+				<p align="center"><fmt:message key="index.menu.titre1.soustitre5" /> :</p>
 				<p align="center">
 					<select name="exemple" size="1">
 						<optgroup>
@@ -121,7 +121,7 @@
 						</optgroup>
 					</select>
 				<p align="center">
-					<button type="submit">Submit</button>
+					<button type="submit"><fmt:message key="index.afficher" /></button>
 				</p>
 
 
@@ -134,7 +134,7 @@
 		<div id="supprimer" style='display: none; float: left;'>
 			<fieldset>
 				<FORM METHOD=post ACTION="SupprimerEx">
-					<p align="center">examples :</p>
+					<p align="center"><fmt:message key="index.menu.titre1.soustitre5" /> :</p>
 					<p align="center">
 						<select name="exemple" size="1">
 							<optgroup>
@@ -148,7 +148,7 @@
 							</optgroup>
 						</select>
 					<p align="center">
-						<button type="submit">Delete</button>
+						<button type="submit"><fmt:message key="index.menu.titre1.soustitre4" /></button>
 					</p>
 
 
@@ -159,15 +159,17 @@
 		<div id="ajout" style='display: none; float: left;'>
 			<p>
 			<form method="post" action="AjouterExp">
-				<input type="submit" id='soumettreEx' name="soumettreEx"
-					value="AjouterExp"/>
-					<input style="width: auto;" type="text"
+			<fmt:message key="index.name" />: <input style="width: auto;" type="text"
 					id='soumettreEx' name="nomEx" value=""/>
-	</form>
-				</p>
+					<br/>					
+					<input type="submit" id='soumettreEx' name= <fmt:message key ="index.menu.titre1.soustitre2"/>
+					value="<fmt:message key="index.menu.titre1.soustitre2" />"/>
+			</form>
+			</p>
 			
 		</div>
 	</div>
+	
 	
 	<%@include file="barrePerso.jsp"%>
 	<!-- END barre perso -->

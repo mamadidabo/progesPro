@@ -71,7 +71,7 @@
     //function to initialize a new problem
     function newproblem()
     {
-    		deleteAllIput();
+    		deleteAllInput();
             viderNbInput(1);
             ajoutInput();
             ajoutInput();

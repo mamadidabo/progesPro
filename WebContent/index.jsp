@@ -58,6 +58,13 @@
 </div>
 </fmt:bundle>
 <%! int m=0;  %>
+
+<script type="text/javascript">
+initPage();
+</script>
+
+
+
 </body>
 
 
@@ -67,7 +74,7 @@
 
 
 
-
+	
 
 
 
