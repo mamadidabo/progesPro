@@ -116,9 +116,10 @@ function initPage()
 			incrementNbInput();	//	 le comptage est apres le chargement de la page ...
 			}
 		$("#textBox" + i).val(input[i-1]);
+		updateLaTeX(input[i-1],'textBox'+ i);    
 					
 		}
-
+	
 }					
 			
 
