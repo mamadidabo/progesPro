@@ -12,6 +12,7 @@ import com.sdzee.beans.Utilisateur;
 import com.sdzee.forms.SimpleCrypto;
 
 public class UtilisateurDaoImpl implements UtilisateurDao {
+    private static final String SQL_SELECT_ID = "SELECT id, email, mot_de_passe, nom,prenom FROM Utilisateur WHERE id = ?";
     private static final String SQL_SELECT_MOT_DE_PASSE = "SELECT id, email, mot_de_passe, nom,prenom FROM Utilisateur WHERE mot_de_passe=?";
     private static final String SQL_SELECT_PAR_EMAIL = "SELECT id, email, mot_de_passe, nom,prenom FROM Utilisateur WHERE email = ? ";
     private static final String SQL_INSERT           = "INSERT INTO Utilisateur (email,mot_de_passe, nom, prenom) VALUES (?, ?, ?,?)";
@@ -122,6 +123,12 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
         utilisateur.setPrenom(resultSet.getString("prenom"));
         //utilisateur.setDateInscription( resultSet.getTimestamp( "date_inscription" ) );
         return utilisateur;
+    }
+
+	@Override
+	public Utilisateur trouverUtilisateur(long id) throws Exception {
+		// TODO Auto-generated method stub
+        return trouver( SQL_SELECT_ID, id );
     }
 
 }

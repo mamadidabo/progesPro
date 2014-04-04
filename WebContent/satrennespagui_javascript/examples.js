@@ -22,7 +22,7 @@
 		    		
 		    		if ( langue == "en")
 		    		{
-			    		afficheDescription("Latin square","A Latin square is a square array of n rows and n columns filled with n distinct elements which each line and each column only contains a single copy.");
+			    		afficheDescription("Latin square","A Latin square is a square array of 3 rows and 3 columns filled with 3 distinct elements which each line and each column only contains a single copy.");
 		    		}else{
 			    		afficheDescription("Carr&eacute Latin","Un carr&eacute latin est un tableau carr&eacute de n lignes et n colonnes remplies de n &eacutel&eacutements distincts dont chaque ligne et chaque colonne ne contient qu'un seul exemplaire.");
 		    		}
@@ -225,9 +225,9 @@
 
 		    		if ( langue == "en")
 		    		{
-			    		afficheDescription("8 queens","The goal of the problem is to place eight ladies eight ladies of a chess game on an 8 × 8 chessboard without boxes that ladies can not threaten each other according to the rules of chess (the color of the parts is ignored). Therefore, two ladies should never share the same row, column, or diagonal.");
+			    		afficheDescription("8 queens","The goal of the problem is to place eight ladies eight ladies of a chess game on an 8 X 8 chessboard without boxes that ladies can not threaten each other according to the rules of chess (the color of the parts is ignored). Therefore, two ladies should never share the same row, column, or diagonal.");
 		    		}else{
-			    		afficheDescription("Les 8 Dames","Le but du probl&egraveme des huit dames est de placer huit dames d'un jeu d'&eacutechecs sur un &eacutechiquier de 8 × 8 cases sans que les dames ne puissent se menacer mutuellement, conform&eacutement aux r&egravegles du jeu d'&eacutechecs (la couleur des pi&egraveces est ignor&eacutee). Par cons&eacutequent, deux dames ne devraient jamais partager la m&ecircme rang&eacutee, colonne, ou diagonale.");
+			    		afficheDescription("Les 8 Dames","Le but du probl&egraveme des huit dames est de placer huit dames d'un jeu d'&eacutechecs sur un &eacutechiquier de 8 X 8 cases sans que les dames ne puissent se menacer mutuellement, conform&eacutement aux r&egravegles du jeu d'&eacutechecs (la couleur des pi&egraveces est ignor&eacutee). Par cons&eacutequent, deux dames ne devraient jamais partager la m&ecircme rang&eacutee, colonne, ou diagonale.");
 		    		}
 		    		
 		    	break;

@@ -1,4 +1,6 @@
-<div id ="home">				 
+
+<div id ="home">			 
+
 <div class='row'> 
 	<!--bloc central--> 
 
@@ -261,7 +263,7 @@
 						<form class='form-horizontal well' id='formulaire_satisfiabilite' method="post" action=AjouterExp>
 
 						
-		<form class='form-horizontal well' id='formulaire_satisfiabilite'>
+		<form class='form-horizontal well' id='formulaire_satisfiabilite' name="formulaire_satisfiabilite">
 			<div class='row-fluid'>
 			
 		
@@ -298,6 +300,8 @@
 					<%
 						}
 					%>
+					
+					
 				</div>
 			</div>
 			<div class='row-fluid'>

@@ -1,8 +1,6 @@
 
 package com.sdzee.beans;
 
-import com.sun.jmx.snmp.Timestamp;
-
 public class Utilisateur {
 	private Long      id;
 
