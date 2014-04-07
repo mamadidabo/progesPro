@@ -24,7 +24,7 @@
 		    		{
 			    		afficheDescription("Latin square","A Latin square is a square array of 3 rows and 3 columns filled with 3 distinct elements which each line and each column only contains a single copy.");
 		    		}else{
-			    		afficheDescription("Carr&eacute Latin","Un carr&eacute latin est un tableau carr&eacute de n lignes et n colonnes remplies de n &eacutel&eacutements distincts dont chaque ligne et chaque colonne ne contient qu'un seul exemplaire.");
+			    		afficheDescription("Carr&eacute Latin","Un carr&eacute latin est un tableau carr&eacute de 3 lignes et 3 colonnes remplies de n &eacutel&eacutements distincts dont chaque ligne et chaque colonne ne contient qu'un seul exemplaire.");
 		    		}
 		    		
 		    	break;
