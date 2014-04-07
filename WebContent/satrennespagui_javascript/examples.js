@@ -97,7 +97,7 @@
 		    		{
 			    		afficheDescription("Sudoku 9X9","The goal is to fill an array of 9 lines x 9 columns with numbers from 1 to 9 by always ensuring that the same number appears only once in each column and only once per line.");
 		    		}else{
-			    		afficheDescription("Sudoku 9X9","Le but du jeu est de remplir 81 cases contenant des chiffres allant de 1 &agrave 9 en veillant toujours &agrave ce qu'un m&ecircme chiffre ne figure qu'une seule fois par colonne, une seule fois par ligne, et une seule fois par carr&ecute de neuf cases.");
+			    		afficheDescription("Sudoku 9X9","Le but du jeu est de remplir 81 cases contenant des chiffres allant de 1 &agrave 9 en veillant toujours &agrave ce qu'un m&ecircme chiffre ne figure qu'une seule fois par colonne, une seule fois par ligne, et une seule fois par carr&eacute de neuf cases.");
 		    		}
 		    			
 		    	break;
