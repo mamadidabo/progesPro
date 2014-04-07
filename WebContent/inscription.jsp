@@ -59,15 +59,17 @@
 				<input type="password" id="confirmation" name="confirmation" value="" size="20" maxlength="20" /> 
 				<span class="erreur">${form.erreurs['confirmation']}</span>
 				<br /> 
-				<label for="nom"> <fmt:message key="inscription.nomUser" /> </label>
+				<label for="nom"> <fmt:message key="inscription.nomUser" /> 
+				<span class="requis">*</span></label>
 				<input type="text" id="nom" name="nom" value="<c:out value="${utilisateur.nom}"/>" size="20" maxlength="20" />
 				<span class="erreur">${form.erreurs['nom']}</span>
 				<br /> 
-				<label for="prenom"><fmt:message key="inscription.prenomUser" /></label>
+				<label for="prenom"><fmt:message key="inscription.prenomUser" />
+				<span class="requis">*</span></label>
 				<input type="text" id="prenom" name="prenom" value="<c:out value="${utilisateur.prenom}"/>" size="20" maxlength="20" />
 				<span class="erreur">${form.erreurs['prenom']}</span>
 				<br /> <input type="submit" value="Inscription" class="sansLabel" />
-				<br /> <input type="reset" value="Annuler" class="sansLabel" /> <br />
+				<br /> <input type="reset" value=<fmt:message key="inscription.annuler" /> class="sansLabel" /> <br />
 
 				<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
 			</fieldset>

@@ -40,14 +40,18 @@
 								<ul class='dropdown-menu'>
 									<li><a onclick="np();"><fmt:message
 												key="index.menu.titre1.soustitre1" /></a></li>
-									<li><a onclick="changer('ajout')"><fmt:message
-												key="index.menu.titre1.soustitre2" /></a></li>
-									<li><a onclick="changer('ajout')"><fmt:message
-												key="index.menu.titre1.soustitre3" /></a></li>
-									<li><a onclick="changer('supprimer')"><fmt:message
-												key="index.menu.titre1.soustitre4" /></a></li>
-									<li><a onclick="changer('affiche')"><fmt:message
-												key="index.menu.titre1.soustitre5" /></a></li>
+												
+									<c:if test="${ ! empty sessionScope.sessionUtilisateur.email}">			
+										<li><a onclick="changer('ajout')"><fmt:message
+													key="index.menu.titre1.soustitre2" /></a></li>
+										<li><a onclick="changer('ajout')"><fmt:message
+													key="index.menu.titre1.soustitre3" /></a></li>
+										<li><a onclick="changer('supprimer')"><fmt:message
+													key="index.menu.titre1.soustitre4" /></a></li>
+										<li><a onclick="changer('affiche')"><fmt:message
+													key="index.menu.titre1.soustitre5" /></a></li>
+													
+									</c:if>
 								</ul></li>
 
 							<li class="divider-vertical"></li>

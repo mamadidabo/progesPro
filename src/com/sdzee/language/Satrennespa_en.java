@@ -37,6 +37,8 @@ public class Satrennespa_en extends ListResourceBundle{
 		{"inscription.confirmmdp","Confirm password"},
 		{"inscription.nomUser","User name"},
 		{"inscription.prenomUser","User first name"},
+		{"inscription.annuler","Cancel"},
+		{"connexion.memoire","Remember me"},
 		{"result.satisfiable","The formula is satisfiable, here is a solution :"},
 		{"result.nonsatisfiable","The formula is not satisfiable !"},
 		{"result.pbsolveur","Problem solver, please refresh the page"},
@@ -61,7 +63,7 @@ public class Satrennespa_en extends ListResourceBundle{
 		{"index.menu.titre1.soustitre2", "Save"},
 		{"index.menu.titre1.soustitre3", "Save as"},
 		{"index.menu.titre1.soustitre4", "Delete"},
-		{"index.menu.titre1.soustitre5", "Submit"},	
+		{"index.menu.titre1.soustitre5", "Open"},	
 		{"infos.return","Return problem"},	
 		{"index.name","Name"},
 		{"index.afficher","Display"}
